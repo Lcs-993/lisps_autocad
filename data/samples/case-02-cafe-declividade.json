@@ -1,0 +1,36 @@
+{
+  "project_id": "GEOIA-002",
+  "crop": "cafe",
+  "region": "Minas Gerais",
+  "season": "safra 2026",
+  "area_ha": 86.2,
+  "terrain": {
+    "slope_pct": 11.8,
+    "drainage": "média",
+    "soil": "argissolo"
+  },
+  "constraints": [
+    "declividade elevada em 35% da área",
+    "córrego permanente no limite sul",
+    "necessidade de proteção de solo e controle de erosão"
+  ],
+  "operation": {
+    "machine_model": "máquina de pulverização auto guiada",
+    "implement_width_m": 24,
+    "guidance_system": "RTK + correção por base local",
+    "turning_radius_m": 10
+  },
+  "layout": {
+    "blocks": 4,
+    "orientation_deg": 32,
+    "row_spacing_m": 3.5,
+    "traffic_pattern": "faixas em contorno e acesso por borda"
+  },
+  "deliverables": [
+    "mapa de declividade",
+    "plano de manejo de solos",
+    "rota de operação",
+    "documentação de proteção ambiental"
+  ],
+  "notes": "A orientação do layout foi ajustada para reduzir a passagem de máquinas em áreas de maior inclinação, preservando drenagem e reduzindo risco de erosão."
+}

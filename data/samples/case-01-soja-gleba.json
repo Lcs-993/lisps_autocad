@@ -1,0 +1,36 @@
+{
+  "project_id": "GEOIA-001",
+  "crop": "soja",
+  "region": "Mato Grosso do Sul",
+  "season": "safra 2026/27",
+  "area_ha": 240.5,
+  "terrain": {
+    "slope_pct": 3.4,
+    "drainage": "boa",
+    "soil": "latossolo vermelho"
+  },
+  "constraints": [
+    "preservação permanente na borda norte",
+    "acesso principal no lado leste",
+    "restrição de energia elétrica na área central"
+  ],
+  "operation": {
+    "machine_model": "trator 4x4 220 hp",
+    "implement_width_m": 18,
+    "guidance_system": "GNSS RTK",
+    "turning_radius_m": 12.5
+  },
+  "layout": {
+    "blocks": 6,
+    "orientation_deg": 18,
+    "row_spacing_m": 0.45,
+    "traffic_pattern": "dupla entrada com faixa de retorno"
+  },
+  "deliverables": [
+    "mapa de talhões",
+    "linhas de guia",
+    "plano de trafegabilidade",
+    "documentação de operação"
+  ],
+  "notes": "Área com relevo suave e bom desempenho de tráfego. A orientação foi definida para reduzir o efeito de declive em marcha e apoiar a operação autônoma."
+}

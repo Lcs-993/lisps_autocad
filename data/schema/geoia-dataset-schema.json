@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "GeoIA Agricultural Project Dataset",
+  "type": "object",
+  "required": [
+    "project_id",
+    "crop",
+    "region",
+    "area_ha",
+    "terrain",
+    "constraints",
+    "operation",
+    "deliverables"
+  ],
+  "properties": {
+    "project_id": { "type": "string" },
+    "crop": { "type": "string" },
+    "region": { "type": "string" },
+    "season": { "type": "string" },
+    "area_ha": { "type": "number" },
+    "terrain": {
+      "type": "object",
+      "required": ["slope_pct", "drainage", "soil"],
+      "properties": {
+        "slope_pct": { "type": "number" },
+        "drainage": { "type": "string" },
+        "soil": { "type": "string" }
+      }
+    },
+    "constraints": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "operation": {
+      "type": "object",
+      "required": ["machine_model", "implement_width_m", "guidance_system"],
+      "properties": {
+        "machine_model": { "type": "string" },
+        "implement_width_m": { "type": "number" },
+        "guidance_system": { "type": "string" },
+        "turning_radius_m": { "type": "number" }
+      }
+    },
+    "layout": {
+      "type": "object",
+      "properties": {
+        "blocks": { "type": "integer" },
+        "orientation_deg": { "type": "number" },
+        "row_spacing_m": { "type": "number" },
+        "traffic_pattern": { "type": "string" }
+      }
+    },
+    "deliverables": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "notes": { "type": "string" }
+  }
+}

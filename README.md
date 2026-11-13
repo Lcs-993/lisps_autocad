@@ -21,8 +21,12 @@ project-structure.md              visão geral da arquitetura do projeto
 
 data/                             dados e amostras para treinamento
   README.md
+  schema/
+    geoia-dataset-schema.json
   raw/                            materiais brutos e fontes iniciais
-  samples/                        exemplos estruturados
+  samples/
+    case-01-soja-gleba.json
+    case-02-cafe-declividade.json
   annotations/                    metadados e anotações
 
 docs/                             documentação técnica e de domínio
@@ -30,6 +34,7 @@ docs/                             documentação técnica e de domínio
     README.md
     training-plan.md
     knowledge-model.md
+    knowledge-base.md
 
 lisps/                            rotinas AutoLISP e ferramentas CAD
 menu/                             arquivos do menu do AutoCAD
@@ -54,11 +59,16 @@ src/                              fontes e materiais técnicos do projeto
 training/                         notas, lições e checklists
   README.md
   geoia-learning-notes.md
+  dataset-index.md
   lessons/
   checklists/
 ```
 
-A estrutura está completa e organizada para servir como base de treinamento do GeoIA, unindo conhecimento técnico, documentação de domínio e materiais de apoio.
+A estrutura está completa e organizada para servir como base de treinamento do GeoIA, unindo conhecimento técnico, documentação de domínio, exemplos estruturados e materiais de apoio.
+
+## Dataset inicial
+
+O repositório já inclui um dataset inicial com exemplos de projetos agrícolas em formato JSON, bem como um schema-base para validação e organização dos registros. Esse conjunto serve como base inicial para treinamento e evolução do GeoIA no domínio agrícola.
 
 ## Como usar este repositório
 
