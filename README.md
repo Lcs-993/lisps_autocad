@@ -15,19 +15,50 @@ A ideia central não é manter um agente executável, mas construir um conjunto 
 ## Estrutura do repositório
 
 ```
-.claude/agents/geoai.md       visão conceitual do GeoIA
-artifacts/geoia/README.md    artefatos e entregáveis do projeto
-data/                        dados e amostras para treinamento
-  samples/                   exemplos estruturados
-  raw/                       materiais brutos e referências iniciais
-docs/                       documentação técnica e de domínio
-references/                 referências de domínio e materiais de apoio
-  agriculture/              contexto agrícola e operacional
-  cad/                      desenhos, padrões e automação CAD
-  domain/                   referências gerais do projeto
-src/                        fontes e materiais técnicos do projeto
-training/                   anotações e documentação de treinamento
+.claude/agents/geoai.md            visão conceitual do GeoIA
+artifacts/geoia/README.md         artefatos e entregáveis do projeto
+project-structure.md              visão geral da arquitetura do projeto
+
+data/                             dados e amostras para treinamento
+  README.md
+  raw/                            materiais brutos e fontes iniciais
+  samples/                        exemplos estruturados
+  annotations/                    metadados e anotações
+
+docs/                             documentação técnica e de domínio
+  geoia/
+    README.md
+    training-plan.md
+    knowledge-model.md
+
+lisps/                            rotinas AutoLISP e ferramentas CAD
+menu/                             arquivos do menu do AutoCAD
+
+prompts/                          prompts-base e materiais de referência
+  geoia-agent.md
+
+references/                       referências de domínio e materiais de apoio
+  README.md
+  agriculture/
+    project-patterns.md
+  cad/
+    autocad-patterns.md
+  domain/
+    geoia-domain-overview.md
+
+src/                              fontes e materiais técnicos do projeto
+  README.md
+  autocad/
+  templates/
+
+training/                         notas, lições e checklists
+  README.md
+  geoia-learning-notes.md
+  lessons/
+  checklists/
 ```
+
+A estrutura está completa e organizada para servir como base de treinamento do GeoIA, unindo conhecimento técnico, documentação de domínio e materiais de apoio.
 
 ## Como usar este repositório
 
