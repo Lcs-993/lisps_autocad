@@ -1,31 +1,33 @@
 # lisps_autocad
 
-Comandos LISP próprios para AutoCAD / Civil 3D e um menu (aba de Ribbon **Lisps** + menu suspenso **Lisps**)
-no mesmo formato do menu do AgroCAD.
+Este repositório é uma base de conhecimento e treinamento para o GeoIA, não um agente em execução. O foco principal é registrar e organizar o aprendizado obtido no desenvolvimento de ferramentas para AutoCAD / Civil 3D, com a intenção de usar esse material como referência para treinar uma IA especialista em projetos agrícolas.
+
+A estrutura do projeto reúne práticas, rotinas, padrões e conceitos de desenho técnico, automação e operação agrícola, a fim de alimentar o treinamento e a evolução do GeoIA.
 
 ## Estrutura
 
 ```
-.claude/agents/geoai.md       especificação do agente GeoIA
-artifacts/geoia/README.md     artefatos e entregáveis do projeto
-docs/geoia/README.md         documentação do conceito GeoIA
-lisps/TrocaLayer.lsp         rotina genérica de "Troca Rápida de Layer" + comando TR-LE
-menu/LISPS.cuix             menu parcial (gerado a partir de menu/src)
-menu/LISPS.mnl              carregado junto com o .cuix; carrega todos os .lsp de lisps/
-menu/src/                   fontes XML do .cuix
-menu/build_cuix.ps1         reempacota menu/src -> menu/LISPS.cuix
-prompts/geoia-agent.md       prompt operacional para o agente GeoIA
+.claude/agents/geoai.md       visão conceitual do agente GeoIA
+artifacts/geoia/README.md    artefatos e materiais de referência para treinamento
+docs/geoia/README.md        documentação do contexto do projeto e do GeoIA
+lisps/TrocaLayer.lsp        rotina genérica de "Troca Rápida de Layer" + comando TR-LE
+menu/LISPS.cuix            menu parcial (gerado a partir de menu/src)
+menu/LISPS.mnl             carregado junto com o .cuix; carrega todos os .lsp de lisps/
+menu/src/                  fontes XML do .cuix
+menu/build_cuix.ps1        reempacota menu/src -> menu/LISPS.cuix
+prompts/geoia-agent.md     material de referência e prompt-base para treinamento
 ```
 
-## Estrutura de documentação e prompts
+## Como este repositório deve ser entendido
 
-O repositório agora está organizado em três áreas principais:
+O objetivo central aqui não é entregar um agente funcional pronto para uso. O foco é o seguinte:
 
-- `docs/`: documentação conceitual e de referência.
-- `prompts/`: instruções e prompts para agentes de IA.
-- `artifacts/`: entregáveis e materiais de referência do projeto GeoIA.
+- registrar o conhecimento adquirido em ferramentas CAD e automação;
+- documentar a lógica de projetos agrícolas e de pilotagem automática;
+- servir como base de treinamento para o GeoIA;
+- manter exemplos, padrões e referências que possam ser reutilizados em IA, CAD e geoprocessamento.
 
-Essa organização permite separar a base técnica do AutoCAD, a documentação do agente especializado e os artefatos de projeto.
+Em outras palavras, o projeto funciona como corpus técnico e referência de domínio para a formação do GeoIA.
 
 ## Comandos
 
