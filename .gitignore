@@ -1,0 +1,8 @@
+# Ignore Windows/AutoCAD temporary files
+Thumbs.db
+Desktop.ini
+*.bak
+*.tmp
+*.log
+*.swp
+*.swo

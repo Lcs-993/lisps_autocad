@@ -1,0 +1,33 @@
+;;; LISPS.mnl - carregado automaticamente pelo AutoCAD junto com LISPS.cuix.
+;;; Carrega todas as rotinas .lsp da pasta ..\lisps (relativa ao .cuix).
+
+(vl-load-com)
+
+(defun lisps:pasta-menu (/ grp)
+  (setq grp (vl-catch-all-apply
+              'vla-item
+              (list (vla-get-MenuGroups (vlax-get-acad-object)) "LISPS")))
+  (if (not (vl-catch-all-error-p grp))
+    (vl-filename-directory (vla-get-MenuFileName grp))
+  )
+)
+
+(defun lisps:carrega-tudo (/ menu raiz pasta)
+  (if (setq menu (lisps:pasta-menu))
+    (progn
+      (setq raiz  (vl-filename-directory menu)          ; ...\lisps_autocad
+            pasta (strcat raiz "\\lisps")
+            *LISPS-DIR* pasta)                             ; usado pelos comandos (DCL, config)
+      (foreach f (vl-directory-files pasta "*.lsp" 1)
+        (if (vl-catch-all-error-p
+              (vl-catch-all-apply 'load (list (strcat pasta "\\" f))))
+          (princ (strcat "\n[LISPS] Falha ao carregar " f))
+        )
+      )
+    )
+    (princ "\n[LISPS] Grupo de menu LISPS nao encontrado.")
+  )
+  (princ)
+)
+
+(lisps:carrega-tudo)

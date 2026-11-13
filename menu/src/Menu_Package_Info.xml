@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MenuPackageParts>
+  <PartData PartData_Name="/Header.cui" PartData_Modified="2026-11-13T17:00:21.3022711-03:00" />
+  <PartData PartData_Name="/MenuGroup.cui" PartData_Modified="2026-11-13T17:00:21.3022711-03:00" />
+  <PartData PartData_Name="/PopMenuRoot.cui" PartData_Modified="2026-11-13T17:00:21.3022711-03:00" />
+  <PartData PartData_Name="/RibbonRoot.cui" PartData_Modified="2026-11-13T17:00:21.3022711-03:00" />
+  <PartData PartData_Name="/Menu_Package_Info.xml" PartData_Modified="2026-11-13T17:00:21.3022711-03:00" />
+</MenuPackageParts>

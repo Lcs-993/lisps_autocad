@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Warning! Do not edit the contents of this file.
+If you attempt to edit this file using an XML editor, you could lose
+customization and migration functionality. If you need to change
+information in the customization file, use the Customize User Interface
+dialog in the product.
+To access the Customize User Interface dialog, click the Tools menu,
+Customization panel, User Interface button, or enter CUI on the command line.
+-->
+<RibbonRoot>
+  <RibbonPanelSourceCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <RibbonPanelSource UID="RBN_LISPS_PNL_AJUSTES" Text="Ajustes" HiddenInEditor="false">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <Name xlate="true" UID="XLS_LISPS_PNL_AJUSTES">Ajustes</Name>
+      <RibbonRow UID="RBN_LISPS_ROW_AJUSTES">
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <RibbonSplitButton UID="RBN_LISPS_SPLIT_TR" Id="AcRibbonSplitButton" Text="Troca Rápida de Layer" SmallImage="RCDATA_16_LAYCUR" LargeImage="RCDATA_32_LAYCUR" Behavior="DropDownNoFollow" ListStyle="Descriptive" ButtonStyle="LargeWithText" Grouping="false">
+          <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          <RibbonCommandButton UID="RBN_LISPS_BTN_TRLE" Id="AcRibbonCommandButton" Text="Transformar em Limite Externo" ButtonStyle="SmallWithText" MenuMacroID="MM_LISPS_TRLE" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_LISPS_TT_TRLE">Transformar em Limite Externo</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+        </RibbonSplitButton>
+      </RibbonRow>
+    </RibbonPanelSource>
+    <RibbonPanelSource UID="RBN_LISPS_PNL_SIST" Text="Sistematização" HiddenInEditor="false">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <Name xlate="true" UID="XLS_LISPS_PNL_SIST">Sistematização</Name>
+      <RibbonRow UID="RBN_LISPS_ROW_SIST">
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <RibbonCommandButton UID="RBN_LISPS_BTN_CL" Id="AcRibbonCommandButton" Text="Criar Linhas" ButtonStyle="LargeWithText" MenuMacroID="MM_LISPS_CRIALINHAS" KeyTip="">
+          <TooltipTitle xlate="true" UID="XLS_LISPS_TT_CL">Criar Linhas</TooltipTitle>
+          <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        </RibbonCommandButton>
+      </RibbonRow>
+    </RibbonPanelSource>
+  </RibbonPanelSourceCollection>
+  <RibbonTabSourceCollection>
+    <RibbonTabSource Text="Lisps" UID="RBN_LISPS_TAB">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <Name xlate="true" UID="XLS_LISPS_TAB">Lisps</Name>
+      <RibbonPanelSourceReference UID="RBN_LISPS_REF_AJUSTES" PanelId="RBN_LISPS_PNL_AJUSTES" ResizeStyle="Default">
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      </RibbonPanelSourceReference>
+      <RibbonPanelSourceReference UID="RBN_LISPS_REF_SIST" PanelId="RBN_LISPS_PNL_SIST" ResizeStyle="Default">
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      </RibbonPanelSourceReference>
+    </RibbonTabSource>
+  </RibbonTabSourceCollection>
+  <RibbonTabSelectors />
+</RibbonRoot>
