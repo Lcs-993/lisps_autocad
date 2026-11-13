@@ -6,12 +6,26 @@ no mesmo formato do menu do AgroCAD.
 ## Estrutura
 
 ```
-lisps/TrocaLayer.lsp   rotina genérica de "Troca Rápida de Layer" + comando TR-LE
-menu/LISPS.cuix        menu parcial (gerado a partir de menu/src)
-menu/LISPS.mnl         carregado junto com o .cuix; carrega todos os .lsp de lisps/
-menu/src/              fontes XML do .cuix
-menu/build_cuix.ps1    reempacota menu/src -> menu/LISPS.cuix
+.claude/agents/geoai.md       especificação do agente GeoIA
+artifacts/geoia/README.md     artefatos e entregáveis do projeto
+docs/geoia/README.md         documentação do conceito GeoIA
+lisps/TrocaLayer.lsp         rotina genérica de "Troca Rápida de Layer" + comando TR-LE
+menu/LISPS.cuix             menu parcial (gerado a partir de menu/src)
+menu/LISPS.mnl              carregado junto com o .cuix; carrega todos os .lsp de lisps/
+menu/src/                   fontes XML do .cuix
+menu/build_cuix.ps1         reempacota menu/src -> menu/LISPS.cuix
+prompts/geoia-agent.md       prompt operacional para o agente GeoIA
 ```
+
+## Estrutura de documentação e prompts
+
+O repositório agora está organizado em três áreas principais:
+
+- `docs/`: documentação conceitual e de referência.
+- `prompts/`: instruções e prompts para agentes de IA.
+- `artifacts/`: entregáveis e materiais de referência do projeto GeoIA.
+
+Essa organização permite separar a base técnica do AutoCAD, a documentação do agente especializado e os artefatos de projeto.
 
 ## Comandos
 
