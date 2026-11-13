@@ -1,0 +1,25 @@
+{
+  "project_id": "MILHO-01",
+  "crop": "milho",
+  "terrain_type": "relevo plano",
+  "region": "PR",
+  "area_ha": 210,
+  "terrain": {
+    "slope_pct": 1.8,
+    "drainage": "boa",
+    "soil": "chernozem"
+  },
+  "constraints": ["uso intensivo de máquinas", "acesso por lateral oeste"],
+  "operation": {
+    "machine_model": "trator com plantadeira",
+    "implement_width_m": 20,
+    "guidance_system": "GNSS"
+  },
+  "layout": {
+    "blocks": 6,
+    "orientation_deg": 12,
+    "row_spacing_m": 0.52
+  },
+  "deliverables": ["layout de plantio", "rota de passagem", "mapa de área"],
+  "notes": "Projeto eficiente para operação em relevo plano, com alta padronização e baixa necessidade de ajustes complexos."
+}

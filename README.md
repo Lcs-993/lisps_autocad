@@ -27,6 +27,20 @@ data/                             dados e amostras para treinamento
   samples/
     case-01-soja-gleba.json
     case-02-cafe-declividade.json
+  cases/
+    README.md
+    soja/
+      case-soja-01.json
+    cafe/
+      case-cafe-01.json
+    milho/
+      case-milho-01.json
+  groundtruth/
+    README.md
+    validation-rules.md
+  benchmarks/
+    README.md
+    quality-scorecard.md
   annotations/                    metadados e anotações
 
 docs/                             documentação técnica e de domínio
@@ -50,6 +64,8 @@ references/                       referências de domínio e materiais de apoio
     autocad-patterns.md
   domain/
     geoia-domain-overview.md
+  validation/
+    README.md
 
 src/                              fontes e materiais técnicos do projeto
   README.md
@@ -64,11 +80,19 @@ training/                         notas, lições e checklists
   checklists/
 ```
 
-A estrutura está completa e organizada para servir como base de treinamento do GeoIA, unindo conhecimento técnico, documentação de domínio, exemplos estruturados e materiais de apoio.
+A estrutura está completa e organizada para servir como base de treinamento do GeoIA, unindo conhecimento técnico, documentação de domínio, exemplos estruturados, regras de validação e materiais de apoio.
 
-## Dataset inicial
+## Dataset inicial e validação
 
-O repositório já inclui um dataset inicial com exemplos de projetos agrícolas em formato JSON, bem como um schema-base para validação e organização dos registros. Esse conjunto serve como base inicial para treinamento e evolução do GeoIA no domínio agrícola.
+O repositório já inclui:
+
+- casos por cultura e tipo de terreno;
+- schema-base para organização e validação dos registros;
+- ground truth com regras de consistência do projeto;
+- benchmark de qualidade para avaliação comparativa;
+- referência de domínio e operação agrícola.
+
+Esse conjunto funciona como base inicial para treinamento, validação e evolução do GeoIA no domínio agrícola.
 
 ## Como usar este repositório
 

@@ -1,0 +1,25 @@
+{
+  "project_id": "SOJA-01",
+  "crop": "soja",
+  "terrain_type": "relevo suave",
+  "region": "MS",
+  "area_ha": 180,
+  "terrain": {
+    "slope_pct": 2.5,
+    "drainage": "boa",
+    "soil": "latossolo"
+  },
+  "constraints": ["sem restrição forte", "acesso principal pela borda leste"],
+  "operation": {
+    "machine_model": "tratores de 190 a 220 hp",
+    "implement_width_m": 18,
+    "guidance_system": "GNSS RTK"
+  },
+  "layout": {
+    "blocks": 5,
+    "orientation_deg": 15,
+    "row_spacing_m": 0.45
+  },
+  "deliverables": ["talhões", "linhas de guia", "plano de trafegabilidade"],
+  "notes": "Projeto típico de gleba de relevo suave, com boa eficiência operacional e baixa complexidade de topografia."
+}
