@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+Warning! Do not edit the contents of this file.
+If you attempt to edit this file using an XML editor, you could lose
+customization and migration functionality. If you need to change
+information in the customization file, use the Customize User Interface
+dialog in the product.
+To access the Customize User Interface dialog, click the Tools menu,
+Customization panel, User Interface button, or enter CUI on the command line.
+-->
+<RibbonRoot>
+  <RibbonPanelSourceCollection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <RibbonPanelSource UID="RBN_FT_PNL_AJUSTES" Text="Ajustes" HiddenInEditor="false">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <Name xlate="true" UID="XLS_FT_PNL_AJUSTES">Ajustes</Name>
+      <RibbonRow UID="RBN_FT_ROW_AJUSTES">
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <RibbonCommandButton UID="RBN_FT_BTN_SC" Id="AcRibbonCommandButton" Text="Coordenadas e Unidades" ButtonStyle="LargeWithText" MenuMacroID="MM_FT_SISCOORD" KeyTip="">
+          <TooltipTitle xlate="true" UID="XLS_FT_TT_SC">Sistema de Coordenadas do Projeto e Unidades</TooltipTitle>
+          <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        </RibbonCommandButton>
+        <RibbonCommandButton UID="RBN_FT_BTN_VP" Id="AcRibbonCommandButton" Text="Verificar Projeto" ButtonStyle="LargeWithText" MenuMacroID="MM_FT_VERIFICAPROJ" KeyTip="">
+          <TooltipTitle xlate="true" UID="XLS_FT_TT_VP">Verificação Geral do Projeto</TooltipTitle>
+          <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        </RibbonCommandButton>
+        <RibbonSplitButton UID="RBN_FT_SPLIT_TR" Id="AcRibbonSplitButton" Text="Troca Rápida de Layer" SmallImage="ft-troca-layer-16.png" LargeImage="ft-troca-layer-32.png" Behavior="SplitFollowStaticText" ListStyle="Descriptive" ButtonStyle="LargeWithText" Grouping="false">
+          <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          <RibbonCommandButton UID="RBN_FT_BTN_TRLE" Id="AcRibbonCommandButton" Text="Transformar em Limite Externo" ButtonStyle="SmallWithText" MenuMacroID="MM_FT_TRLE" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_FT_TT_TRLE">Transformar em Limite Externo</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_FT_BTN_TRLI" Id="AcRibbonCommandButton" Text="Transformar em Limite Interno" ButtonStyle="SmallWithText" MenuMacroID="MM_FT_TRLI" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_FT_TT_TRLI">Transformar em Limite Interno</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_FT_BTN_TRSU" Id="AcRibbonCommandButton" Text="Transformar em Guidelines" ButtonStyle="SmallWithText" MenuMacroID="MM_FT_TRSU" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_FT_TT_TRSU">Transformar em Guidelines</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_FT_BTN_TRTA" Id="AcRibbonCommandButton" Text="Transformar em Talhão" ButtonStyle="SmallWithText" MenuMacroID="MM_FT_TRTA" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_FT_TT_TRTA">Transformar em Talhão</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_FT_BTN_TRTE" Id="AcRibbonCommandButton" Text="Transformar em Terraço" ButtonStyle="SmallWithText" MenuMacroID="MM_FT_TRTE" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_FT_TT_TRTE">Transformar em Terraço</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_FT_BTN_TRCO" Id="AcRibbonCommandButton" Text="Transformar em Fileiras" ButtonStyle="SmallWithText" MenuMacroID="MM_FT_TRCO" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_FT_TT_TRCO">Transformar em Fileiras</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_FT_BTN_CRIALAYERS" Id="AcRibbonCommandButton" Text="Criar Padrão de Layers" ButtonStyle="SmallWithText" MenuMacroID="MM_FT_CRIALAYERS" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_FT_TT_CRIALAYERS">Criar Padrão de Layers do Projeto</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+        </RibbonSplitButton>
+        <RibbonSplitButton UID="RBN_FT_SPLIT_LIM" Id="AcRibbonSplitButton" Text="Limites do Talhão" SmallImage="ft-limites-16.png" LargeImage="ft-limites-32.png" Behavior="SplitFollowStaticText" ListStyle="Descriptive" ButtonStyle="LargeWithText" Grouping="false">
+          <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          <RibbonCommandButton UID="RBN_FT_BTN_CORTALIM" Id="AcRibbonCommandButton" Text="Cortar linhas pelo limite" ButtonStyle="SmallWithText" MenuMacroID="MM_FT_CORTALIM" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_FT_TT_CORTALIM">Cortar linhas pelo limite do talhão</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_FT_BTN_ESTENDELIM" Id="AcRibbonCommandButton" Text="Estender linhas até o limite" ButtonStyle="SmallWithText" MenuMacroID="MM_FT_ESTENDELIM" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_FT_TT_ESTENDELIM">Estender linhas até o limite do talhão</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_FT_BTN_AJUSTALIM" Id="AcRibbonCommandButton" Text="Estender e cortar até o limite" ButtonStyle="SmallWithText" MenuMacroID="MM_FT_AJUSTALIM" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_FT_TT_AJUSTALIM">Estender e cortar linhas até o limite do talhão</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_FT_BTN_APAGALIM" Id="AcRibbonCommandButton" Text="Apagar dentro/fora de limite" ButtonStyle="SmallWithText" MenuMacroID="MM_FT_APAGALIM" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_FT_TT_APAGALIM">Apagar objetos dentro ou fora de limite</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+        </RibbonSplitButton>
+        <RibbonSplitButton UID="RBN_FT_SPLIT_GEOM" Id="AcRibbonSplitButton" Text="Geometria" SmallImage="ft-simplificapl-16.png" LargeImage="ft-simplificapl-32.png" Behavior="SplitFollowStaticText" ListStyle="Descriptive" ButtonStyle="LargeWithText" Grouping="false">
+          <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          <RibbonCommandButton UID="RBN_FT_BTN_SMP" Id="AcRibbonCommandButton" Text="Simplificar Polilinhas" ButtonStyle="SmallWithText" MenuMacroID="MM_FT_SIMPLIFICAPL" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_FT_TT_SMP">Reduzir vértices sem perda de qualidade</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_FT_BTN_SEGA" Id="AcRibbonCommandButton" Text="Segmentar Arcos" ButtonStyle="SmallWithText" MenuMacroID="MM_FT_SEGMENTARCOS" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_FT_TT_SEGA">Converter arcos de polilinhas em segmentos de reta</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_FT_BTN_RN" Id="AcRibbonCommandButton" Text="Remover Nós" ButtonStyle="SmallWithText" MenuMacroID="MM_FT_REMOVENOS" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_FT_TT_RN">Remover nós (auto-cruzamentos) de polilinhas</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_FT_BTN_PV" Id="AcRibbonCommandButton" Text="Padronizar Vértices" ButtonStyle="SmallWithText" MenuMacroID="MM_FT_PADRONIZAVERT" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_FT_TT_PV">Padronizar espaçamento entre vértices</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+        </RibbonSplitButton>
+      </RibbonRow>
+    </RibbonPanelSource>
+    <RibbonPanelSource UID="RBN_FT_PNL_SIST" Text="Sistematização" HiddenInEditor="false">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <Name xlate="true" UID="XLS_FT_PNL_SIST">Sistematização</Name>
+      <RibbonRow UID="RBN_FT_ROW_SIST">
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <RibbonCommandButton UID="RBN_FT_BTN_CL" Id="AcRibbonCommandButton" Text="Criar Linhas" ButtonStyle="LargeWithText" MenuMacroID="MM_FT_CRIALINHAS" KeyTip="">
+          <TooltipTitle xlate="true" UID="XLS_FT_TT_CL">Criar Linhas</TooltipTitle>
+          <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        </RibbonCommandButton>
+        <RibbonCommandButton UID="RBN_FT_BTN_CN" Id="AcRibbonCommandButton" Text="Conectar Linhas" ButtonStyle="LargeWithText" MenuMacroID="MM_FT_CONECTALINHAS" KeyTip="">
+          <TooltipTitle xlate="true" UID="XLS_FT_TT_CN">Conectar Linhas entre Talhões</TooltipTitle>
+          <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        </RibbonCommandButton>
+        <RibbonCommandButton UID="RBN_FT_BTN_CR" Id="AcRibbonCommandButton" Text="Carreadores" ButtonStyle="LargeWithText" MenuMacroID="MM_FT_CARREADORES" KeyTip="">
+          <TooltipTitle xlate="true" UID="XLS_FT_TT_CR">Criar Carreadores / Juntar Talhões</TooltipTitle>
+          <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        </RibbonCommandButton>
+        <RibbonCommandButton UID="RBN_FT_BTN_SCC" Id="AcRibbonCommandButton" Text="Concordar Eixos" ButtonStyle="LargeWithText" MenuMacroID="MM_FT_SIS_CONCORDAR" KeyTip="">
+          <TooltipTitle xlate="true" UID="XLS_FT_TT_SCC">Concordar Eixos de Estradas (cruzamentos e praças)</TooltipTitle>
+          <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        </RibbonCommandButton>
+        <RibbonSplitButton UID="RBN_FT_SPLIT_RAREDE" Id="AcRibbonSplitButton" Text="Rede de Rotas" SmallImage="ft-ra-rede-16.png" LargeImage="ft-ra-rede-32.png" Behavior="SplitFollowStaticText" ListStyle="Descriptive" ButtonStyle="LargeWithText" Grouping="false">
+          <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          <RibbonCommandButton UID="RBN_FT_BTN_ALT_RAVERIFICAR" Id="AcRibbonCommandButton" Text="Verificar" ButtonStyle="SmallWithText" MenuMacroID="MM_FT_ALT_RAVERIFICAR" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_FT_TT_ALT_RAVERIFICAR">Rede de Rotas: Verificar (RA_VERIFICAR)</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_FT_BTN_ALT_RACORRIGIR" Id="AcRibbonCommandButton" Text="Corrigir Tudo" ButtonStyle="SmallWithText" MenuMacroID="MM_FT_ALT_RACORRIGIR" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_FT_TT_ALT_RACORRIGIR">Rede de Rotas: Corrigir Tudo (RA_CORRIGIR)</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_FT_BTN_ALT_RAQUEBRAR" Id="AcRibbonCommandButton" Text="Quebrar nos Entroncamentos" ButtonStyle="SmallWithText" MenuMacroID="MM_FT_ALT_RAQUEBRAR" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_FT_TT_ALT_RAQUEBRAR">Rede de Rotas: Quebrar nos Entroncamentos (RA_QUEBRAR)</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_FT_BTN_ALT_RAPONTAS" Id="AcRibbonCommandButton" Text="Ligar Pontas Soltas" ButtonStyle="SmallWithText" MenuMacroID="MM_FT_ALT_RAPONTAS" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_FT_TT_ALT_RAPONTAS">Rede de Rotas: Ligar Pontas Soltas (RA_PONTAS)</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_FT_BTN_ALT_RAJUNTAR" Id="AcRibbonCommandButton" Text="Emendar Pseudo-nós" ButtonStyle="SmallWithText" MenuMacroID="MM_FT_ALT_RAJUNTAR" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_FT_TT_ALT_RAJUNTAR">Rede de Rotas: Emendar Pseudo-nós (RA_JUNTAR)</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_FT_BTN_ALT_SEGMENTARCOS" Id="AcRibbonCommandButton" Text="Segmentar Arcos" ButtonStyle="SmallWithText" MenuMacroID="MM_FT_SEGMENTARCOS" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_FT_TT_ALT_SEGMENTARCOS">Segmentar Arcos (SEGMENTARCOS)</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_FT_BTN_ALT_RASEMCONEXAO" Id="AcRibbonCommandButton" Text="Marcar Sem Conexão (viaduto)" ButtonStyle="SmallWithText" MenuMacroID="MM_FT_ALT_RASEMCONEXAO" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_FT_TT_ALT_RASEMCONEXAO">Rede de Rotas: Marcar Sem Conexão (viaduto) (RA_SEMCONEXAO)</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_FT_BTN_ALT_RAPROXIMO" Id="AcRibbonCommandButton" Text="Próximo Marcador" ButtonStyle="SmallWithText" MenuMacroID="MM_FT_ALT_RAPROXIMO" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_FT_TT_ALT_RAPROXIMO">Rede de Rotas: Próximo Marcador (RA_PROXIMO)</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_FT_BTN_ALT_RALIMPAR" Id="AcRibbonCommandButton" Text="Limpar Marcadores" ButtonStyle="SmallWithText" MenuMacroID="MM_FT_ALT_RALIMPAR" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_FT_TT_ALT_RALIMPAR">Rede de Rotas: Limpar Marcadores (RA_LIMPAR)</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_FT_BTN_ALT_RADESENHAR" Id="AcRibbonCommandButton" Text="Desenhar Linha da Rede" ButtonStyle="SmallWithText" MenuMacroID="MM_FT_ALT_RADESENHAR" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_FT_TT_ALT_RADESENHAR">Rede de Rotas: Desenhar Linha da Rede (RA_DESENHAR)</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_FT_BTN_RAE" Id="AcRibbonCommandButton" Text="Exportar Rede (GeoJSON)" ButtonStyle="SmallWithText" MenuMacroID="MM_FT_RA_EXPORTAR" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_FT_TT_RAE">Exportar a rede para o Routes Analyzer</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_FT_BTN_ALT_RACONFIG" Id="AcRibbonCommandButton" Text="Configurar" ButtonStyle="SmallWithText" MenuMacroID="MM_FT_ALT_RACONFIG" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_FT_TT_ALT_RACONFIG">Rede de Rotas: Configurar (REDE_CONFIG)</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_FT_BTN_ALT_RAAJUDA" Id="AcRibbonCommandButton" Text="Ajuda" ButtonStyle="SmallWithText" MenuMacroID="MM_FT_ALT_RAAJUDA" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_FT_TT_ALT_RAAJUDA">Rede de Rotas: Ajuda (RA_AJUDA)</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_FT_BTN_ALT_REDECARREGARA" Id="AcRibbonCommandButton" Text="Recarregar RA_REDE" ButtonStyle="SmallWithText" MenuMacroID="MM_FT_ALT_REDECARREGARA" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_FT_TT_ALT_REDECARREGARA">Carregar versão RA_REDE (REDE_CARREGA_RA)</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+        </RibbonSplitButton>
+      </RibbonRow>
+    </RibbonPanelSource>
+  </RibbonPanelSourceCollection>
+  <RibbonTabSourceCollection>
+    <RibbonTabSource Text="FarmTools" UID="RBN_FT_TAB">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <Name xlate="true" UID="XLS_FT_TAB">FarmTools</Name>
+      <RibbonPanelSourceReference UID="RBN_FT_REF_AJUSTES" PanelId="RBN_FT_PNL_AJUSTES" ResizeStyle="Default">
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      </RibbonPanelSourceReference>
+      <RibbonPanelSourceReference UID="RBN_FT_REF_SIST" PanelId="RBN_FT_PNL_SIST" ResizeStyle="Default">
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      </RibbonPanelSourceReference>
+    </RibbonTabSource>
+  </RibbonTabSourceCollection>
+  <RibbonTabSelectors />
+</RibbonRoot>

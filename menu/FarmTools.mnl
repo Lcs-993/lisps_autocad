@@ -1,0 +1,37 @@
+;;; FarmTools.mnl - carregado automaticamente pelo AutoCAD junto com FarmTools.cuix.
+;;; Carrega as rotinas VALIDADAS da pasta ..\lisps (relativa ao .cuix).
+;;; As ferramentas em ..\lisps\em_validacao NAO sao carregadas por aqui:
+;;; para testar uma delas, use APPLOAD no arquivo .lsp correspondente.
+
+(vl-load-com)
+
+(defun ft:pasta-menu (/ grp)
+  (setq grp (vl-catch-all-apply
+              'vla-item
+              (list (vla-get-MenuGroups (vlax-get-acad-object)) "FARMTOOLS")))
+  (if (not (vl-catch-all-error-p grp))
+    (vl-filename-directory (vla-get-MenuFileName grp))
+  )
+)
+
+(defun ft:carrega-tudo (/ menu raiz pasta)
+  (if (setq menu (ft:pasta-menu))
+    (progn
+      (setq raiz         (vl-filename-directory menu)         ; ...\lisps_autocad
+            pasta        (strcat raiz "\\lisps")
+            *LISPS-DIR*  pasta                                 ; usado pelos comandos (DCL, config)
+            *FT-DEV-DIR* (strcat pasta "\\em_validacao"))      ; usado pelas ferramentas em validacao
+      (foreach f (vl-directory-files pasta "*.lsp" 1)
+        (if (vl-catch-all-error-p
+              (vl-catch-all-apply 'load (list (strcat pasta "\\" f))))
+          (princ (strcat "\n[FarmTools] Falha ao carregar " f))
+        )
+      )
+      (princ "\n[FarmTools] Ferramentas carregadas.")
+    )
+    (princ "\n[FarmTools] Grupo de menu FARMTOOLS nao encontrado.")
+  )
+  (princ)
+)
+
+(ft:carrega-tudo)

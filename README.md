@@ -143,13 +143,18 @@ Depois adicione um `MenuMacro` em `menu/src/MenuGroup.cui`, um botão no split b
 
 ## Instalação (uma vez)
 
-1. No AutoCAD: `CUILOAD` → **Procurar** → `menu\LISPS.cuix` → **Carregar**.
+1. No AutoCAD: `CUILOAD` → **Procurar** → `menu\FarmTools.cuix` → **Carregar**.
    O `.mnl` carrega os LISPs automaticamente a cada sessão.
+   Se o menu antigo estiver carregado, descarregue antes: `CUIUNLOAD` → LISPS.
 2. Se o AutoCAD avisar sobre local não confiável: `OPTIONS` → **Arquivos** → **Locais confiáveis**
    → adicione a pasta `lisps_autocad\...` (com `\...` para incluir subpastas).
-3. A aba **Lisps** aparece no Ribbon (painel **Ajustes** → **Troca Rápida de Layer**).
+3. A aba **FarmTools** aparece no Ribbon (painéis **Ajustes** e **Sistematização**) e o menu
+   suspenso **FarmTools** na barra de menus.
 
-Para atualizar o menu: `CUIUNLOAD` → LISPS, rode `pwsh -File menu\build_cuix.ps1`, depois `CUILOAD` de novo.
+Para atualizar o menu: `CUIUNLOAD` → FARMTOOLS, rode `pwsh -File menu\build_cuix.ps1`, depois `CUILOAD` de novo.
+
+O FarmTools tem só as ferramentas validadas (`lisps\*.lsp`). As que ainda estão em teste ficam em
+`lisps\em_validacao\` (carregue com `APPLOAD`); o menu antigo LISPS fica em `menu\legado\`, só para consulta.
 
 ## Comandos
 
@@ -177,10 +182,15 @@ Depois adicione um `MenuMacro` em `menu/src/MenuGroup.cui`, um botão no split b
 
 ## Instalação (uma vez)
 
-1. No AutoCAD: `CUILOAD` → **Procurar** → `menu\LISPS.cuix` → **Carregar**.
+1. No AutoCAD: `CUILOAD` → **Procurar** → `menu\FarmTools.cuix` → **Carregar**.
    O `.mnl` carrega os LISPs automaticamente a cada sessão.
+   Se o menu antigo estiver carregado, descarregue antes: `CUIUNLOAD` → LISPS.
 2. Se o AutoCAD avisar sobre local não confiável: `OPTIONS` → **Arquivos** → **Locais confiáveis**
    → adicione a pasta `lisps_autocad\...` (com `\...` para incluir subpastas).
-3. A aba **Lisps** aparece no Ribbon (painel **Ajustes** → **Troca Rápida de Layer**).
+3. A aba **FarmTools** aparece no Ribbon (painéis **Ajustes** e **Sistematização**) e o menu
+   suspenso **FarmTools** na barra de menus.
 
-Para atualizar o menu: `CUIUNLOAD` → LISPS, rode `pwsh -File menu\build_cuix.ps1`, depois `CUILOAD` de novo.
+Para atualizar o menu: `CUIUNLOAD` → FARMTOOLS, rode `pwsh -File menu\build_cuix.ps1`, depois `CUILOAD` de novo.
+
+O FarmTools tem só as ferramentas validadas (`lisps\*.lsp`). As que ainda estão em teste ficam em
+`lisps\em_validacao\` (carregue com `APPLOAD`); o menu antigo LISPS fica em `menu\legado\`, só para consulta.

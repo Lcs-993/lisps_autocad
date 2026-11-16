@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!--
 Warning! Do not edit the contents of this file.
 If you attempt to edit this file using an XML editor, you could lose
@@ -30,6 +30,644 @@ Customization panel, User Interface button, or enter CUI on the command line.
         <HelpString xlate="true" UID="XLS_LISPS_CL_H">Cria linhas guias, de plantio e de cabeceira (sulcação, plantio e colheita) dentro dos talhões</HelpString>
         <SmallImage Name="RCDATA_16_OFFSET" />
         <LargeImage Name="RCDATA_32_OFFSET" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_LISPS_CONECTALINHAS">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_LISPS_CN_N">Conectar Linhas</Name>
+        <Command>^C^CCONECTALINHAS</Command>
+        <HelpString xlate="true" UID="XLS_LISPS_CN_H">Conecta as linhas da mesma fileira em talhões vizinhos (através dos carreadores) numa polilinha contínua, para reduzir manobras. Equivalente ao GOCON do AgroCAD</HelpString>
+        <SmallImage Name="RCDATA_16_JOIN" />
+        <LargeImage Name="RCDATA_32_JOIN" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_LISPS_CARREADORES">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_LISPS_CR_N">Carreadores</Name>
+        <Command>^C^CCARREADORES</Command>
+        <HelpString xlate="true" UID="XLS_LISPS_CR_H">Corta os talhões por faixas de carreador em volta dos eixos e desenha os carreadores; Juntar Talhões desfaz carreadores. Equivalente ao GOROA do AgroCAD</HelpString>
+        <SmallImage Name="RCDATA_16_SUBTRACT" />
+        <LargeImage Name="RCDATA_32_SUBTRACT" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_LISPS_SISCOORD">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_LISPS_SC_N">Coordenadas e Unidades</Name>
+        <Command>^C^CSISCOORD</Command>
+        <HelpString xlate="true" UID="XLS_LISPS_SC_H">Configura o sistema de coordenadas do projeto atual (Sirgas 2000, WGS84, SAD69, Córrego Alegre) e as unidades do projeto. Equivalente ao CSYS do AgroCAD</HelpString>
+        <SmallImage Name="RCDATA_16_UCS" />
+        <LargeImage Name="RCDATA_32_UCS" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_LISPS_DESVIAOBS">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_LISPS_OB_N">Desviar Obstáculos</Name>
+        <Command>^C^CDESVIAOBS</Command>
+        <HelpString xlate="true" UID="XLS_LISPS_OB_H">Desvia as linhas que cruzam obstáculos (contornos aninhados, raio mínimo e afastamento) ou apenas as interrompe. Equivalente ao GOOBS do AgroCAD</HelpString>
+        <SmallImage Name="RCDATA_16_BREAK" />
+        <LargeImage Name="RCDATA_32_BREAK" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_LISPS_MANOBRAS">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_LISPS_MN_N">Manobras</Name>
+        <Command>^C^CMANOBRAS</Command>
+        <HelpString xlate="true" UID="XLS_LISPS_MN_H">Cria manobras em U ou ômega pelo raio de giro (a cada N, caracol ou 1-3-5-2-4), corta as linhas pelo afastamento da bordadura e junta os trajetos. Equivalente ao GOTUR do AgroCAD</HelpString>
+        <SmallImage Name="RCDATA_16_FILLET" />
+        <LargeImage Name="RCDATA_32_FILLET" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_LISPS_SIS_CONCORDAR">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_LISPS_SCC_N">Concordar Eixos</Name>
+        <Command>^C^CSIS_CONCORDAR</Command>
+        <HelpString xlate="true" UID="XLS_LISPS_SCC_H">Concordância de eixos de estradas: arcos de raio R nos cruzamentos (T, X, L) com quebra no nó, ou praça em volta de ilhas/obstáculos com bifurcação e fusão e quebra nas tangências</HelpString>
+        <SmallImage Name="RCDATA_16_FILLET" />
+        <LargeImage Name="RCDATA_32_FILLET" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_LISPS_TRLI">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_LISPS_TRLI_N">Transformar em Limite Interno</Name>
+        <Command>^C^CTR-LI</Command>
+        <HelpString xlate="true" UID="XLS_LISPS_TRLI_H">Troca rapidamente o layer dos objetos selecionados para o de limite interno (LIMITE_INTERNO)</HelpString>
+        <SmallImage Name="RCDATA_16_LAYCUR" />
+        <LargeImage Name="RCDATA_32_LAYCUR" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_LISPS_TRSU">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_LISPS_TRSU_N">Transformar em Sulcação</Name>
+        <Command>^C^CTR-SU</Command>
+        <HelpString xlate="true" UID="XLS_LISPS_TRSU_H">Troca rapidamente o layer dos objetos selecionados para o de sulcação (SULCOS MESTRES)</HelpString>
+        <SmallImage Name="RCDATA_16_LAYCUR" />
+        <LargeImage Name="RCDATA_32_LAYCUR" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_LISPS_TRTA">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_LISPS_TRTA_N">Transformar em Talhão</Name>
+        <Command>^C^CTR-TA</Command>
+        <HelpString xlate="true" UID="XLS_LISPS_TRTA_H">Troca rapidamente o layer dos objetos selecionados para o de talhão (TALHÕES)</HelpString>
+        <SmallImage Name="RCDATA_16_LAYCUR" />
+        <LargeImage Name="RCDATA_32_LAYCUR" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_LISPS_TRTE">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_LISPS_TRTE_N">Transformar em Terraço</Name>
+        <Command>^C^CTR-TE</Command>
+        <HelpString xlate="true" UID="XLS_LISPS_TRTE_H">Troca rapidamente o layer dos objetos selecionados para o de terraço (TERRAÇOS)</HelpString>
+        <SmallImage Name="RCDATA_16_LAYCUR" />
+        <LargeImage Name="RCDATA_32_LAYCUR" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_LISPS_TRCO">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_LISPS_TRCO_N">Transformar em Colheita</Name>
+        <Command>^C^CTR-CO</Command>
+        <HelpString xlate="true" UID="XLS_LISPS_TRCO_H">Troca rapidamente o layer dos objetos selecionados para o de colheita (LINHAS DE CANA)</HelpString>
+        <SmallImage Name="RCDATA_16_LAYCUR" />
+        <LargeImage Name="RCDATA_32_LAYCUR" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_LISPS_CORTALIM">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_LISPS_CORTALIM_N">Cortar linhas pelo limite do talhão</Name>
+        <Command>^C^CCORTALIM</Command>
+        <HelpString xlate="true" UID="XLS_LISPS_CORTALIM_H">Corta os trechos das linhas que ultrapassam os limites dos talhões selecionados, mantendo as propriedades das linhas originais</HelpString>
+        <SmallImage Name="RCDATA_16_TRIM" />
+        <LargeImage Name="RCDATA_32_TRIM" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_LISPS_ESTENDELIM">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_LISPS_ESTENDELIM_N">Estender linhas até o limite do talhão</Name>
+        <Command>^C^CESTENDELIM</Command>
+        <HelpString xlate="true" UID="XLS_LISPS_ESTENDELIM_H">Estende as pontas das linhas selecionadas, pela tangente, até o limite do talhão que as contém</HelpString>
+        <SmallImage Name="RCDATA_16_EXTEND" />
+        <LargeImage Name="RCDATA_32_EXTEND" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_LISPS_AJUSTALIM">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_LISPS_AJUSTALIM_N">Estender e cortar linhas até o limite do talhão</Name>
+        <Command>^C^CAJUSTALIM</Command>
+        <HelpString xlate="true" UID="XLS_LISPS_AJUSTALIM_H">Estende as pontas que estão dentro do talhão e corta os trechos que ultrapassam o limite</HelpString>
+        <SmallImage Name="RCDATA_16_EXTEND" />
+        <LargeImage Name="RCDATA_32_EXTEND" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_LISPS_APAGALIM">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_LISPS_APAGALIM_N">Apagar objetos dentro ou fora de limite</Name>
+        <Command>^C^CAPAGALIM</Command>
+        <HelpString xlate="true" UID="XLS_LISPS_APAGALIM_H">Apaga objetos inteira ou parcialmente contidos (ou fora de) uma polilinha fechada, independente do zoom</HelpString>
+        <SmallImage Name="RCDATA_16_ERASE" />
+        <LargeImage Name="RCDATA_32_ERASE" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_LISPS_RA_VALIDAR">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_LISPS_RAV_N">Validar Rede de Rotas</Name>
+        <Command>^C^CREDE_VALIDAR</Command>
+        <HelpString xlate="true" UID="XLS_LISPS_RAV_H">Valida a geometria da rede de rotas (só leitura): cruzamentos e T sem vértice, pontas soltas, vértices quase coincidentes, duplicados, objetos não suportados, coordenadas e componentes; marca no layer REDE_ERROS e gera CSV</HelpString>
+        <SmallImage Name="RCDATA_16_JOIN" />
+        <LargeImage Name="RCDATA_32_JOIN" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_LISPS_RA_CORRIGIR">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_LISPS_RAC_N">Corrigir Rede de Rotas</Name>
+        <Command>^C^CREDE_CORRIGIR</Command>
+        <HelpString xlate="true" UID="XLS_LISPS_RAC_H">Corrige a topologia da rede (modo simulação ou UNDO único): insere vértices em cruzamentos e T, fecha pontas soltas, une vértices, remove duplicados e segmentos zero, converte arcos e curvas; gera log CSV</HelpString>
+        <SmallImage Name="RCDATA_16_BREAK" />
+        <LargeImage Name="RCDATA_32_BREAK" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_LISPS_RA_PROXIMO">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_LISPS_RAP_N">Próximo Erro da Rede</Name>
+        <Command>^C^CREDE_PROXIMO</Command>
+        <HelpString xlate="true" UID="XLS_LISPS_RAP_H">Vai até o próximo marcador de erro do REDE_VALIDAR (zoom, descrição e seleção das linhas envolvidas)</HelpString>
+        <SmallImage Name="RCDATA_16_JOIN" />
+        <LargeImage Name="RCDATA_32_JOIN" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_LISPS_RA_EXPORTAR">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_LISPS_RAE_N">Exportar Rede (GeoJSON)</Name>
+        <Command>^C^CREDE_EXPORTAR</Command>
+        <HelpString xlate="true" UID="XLS_LISPS_RAE_H">Exporta as linhas da rede em GeoJSON com o membro crs do EPSG (arcos viram vértices), pronto para o Routes Analyzer</HelpString>
+        <SmallImage Name="RCDATA_16_JOIN" />
+        <LargeImage Name="RCDATA_32_JOIN" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_LISPS_ALT_REDECARREGARA">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_LISPS_ALT_REDECARREGARA_N">Carregar versão RA_REDE</Name>
+        <Command>^C^CREDE_CARREGA_RA</Command>
+        <HelpString xlate="true" UID="XLS_LISPS_ALT_REDECARREGARA_H">Carrega (ou recarrega) routes_analyzer\tools\autocad\RA_REDE.lsp, a outra versão da ferramenta de rede, para comparação</HelpString>
+        <SmallImage Name="RCDATA_16_JOIN" />
+        <LargeImage Name="RCDATA_32_JOIN" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_LISPS_ALT_RAVERIFICAR">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_LISPS_ALT_RAVERIFICAR_N">RA_REDE: Verificar</Name>
+        <Command>^C^C(if (rr:carrega-ra nil) (c:RA_VERIFICAR))</Command>
+        <HelpString xlate="true" UID="XLS_LISPS_ALT_RAVERIFICAR_H">RA_REDE.lsp: verifica a rede e marca os problemas no layer RA_ERROS (não altera as linhas)</HelpString>
+        <SmallImage Name="RCDATA_16_JOIN" />
+        <LargeImage Name="RCDATA_32_JOIN" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_LISPS_ALT_RACORRIGIR">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_LISPS_ALT_RACORRIGIR_N">RA_REDE: Corrigir Tudo</Name>
+        <Command>^C^C(if (rr:carrega-ra nil) (c:RA_CORRIGIR))</Command>
+        <HelpString xlate="true" UID="XLS_LISPS_ALT_RACORRIGIR_H">RA_REDE.lsp: apaga duplicadas, liga pontas soltas, quebra nos entroncamentos, emenda pseudo-nós e verifica de novo</HelpString>
+        <SmallImage Name="RCDATA_16_BREAK" />
+        <LargeImage Name="RCDATA_32_BREAK" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_LISPS_ALT_RAQUEBRAR">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_LISPS_ALT_RAQUEBRAR_N">RA_REDE: Quebrar nos Entroncamentos</Name>
+        <Command>^C^C(if (rr:carrega-ra nil) (c:RA_QUEBRAR))</Command>
+        <HelpString xlate="true" UID="XLS_LISPS_ALT_RAQUEBRAR_H">RA_REDE.lsp: quebra as linhas em todos os entroncamentos e cruzamentos</HelpString>
+        <SmallImage Name="RCDATA_16_BREAK" />
+        <LargeImage Name="RCDATA_32_BREAK" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_LISPS_ALT_RAPONTAS">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_LISPS_ALT_RAPONTAS_N">RA_REDE: Ligar Pontas Soltas</Name>
+        <Command>^C^C(if (rr:carrega-ra nil) (c:RA_PONTAS))</Command>
+        <HelpString xlate="true" UID="XLS_LISPS_ALT_RAPONTAS_H">RA_REDE.lsp: leva cada ponta solta até a linha ou vértice mais próximo e quebra</HelpString>
+        <SmallImage Name="RCDATA_16_EXTEND" />
+        <LargeImage Name="RCDATA_32_EXTEND" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_LISPS_ALT_RAJUNTAR">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_LISPS_ALT_RAJUNTAR_N">RA_REDE: Emendar Pseudo-nós</Name>
+        <Command>^C^C(if (rr:carrega-ra nil) (c:RA_JUNTAR))</Command>
+        <HelpString xlate="true" UID="XLS_LISPS_ALT_RAJUNTAR_H">RA_REDE.lsp: emenda as linhas que se encontram em pseudo-nós</HelpString>
+        <SmallImage Name="RCDATA_16_JOIN" />
+        <LargeImage Name="RCDATA_32_JOIN" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_LISPS_ALT_RASEGMENTAR">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_LISPS_ALT_RASEGMENTAR_N">RA_REDE: Segmentar Arcos</Name>
+        <Command>^C^C(if (rr:carrega-ra nil) (c:RA_SEGMENTAR))</Command>
+        <HelpString xlate="true" UID="XLS_LISPS_ALT_RASEGMENTAR_H">RA_REDE.lsp: converte arcos em segmentos retos</HelpString>
+        <SmallImage Name="RCDATA_16_BREAK" />
+        <LargeImage Name="RCDATA_32_BREAK" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_LISPS_ALT_RASEMCONEXAO">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_LISPS_ALT_RASEMCONEXAO_N">RA_REDE: Marcar Sem Conexão (viaduto)</Name>
+        <Command>^C^C(if (rr:carrega-ra nil) (c:RA_SEMCONEXAO))</Command>
+        <HelpString xlate="true" UID="XLS_LISPS_ALT_RASEMCONEXAO_H">RA_REDE.lsp: marca um cruzamento que não deve ser ligado</HelpString>
+        <SmallImage Name="RCDATA_16_ERASE" />
+        <LargeImage Name="RCDATA_32_ERASE" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_LISPS_ALT_RAPROXIMO">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_LISPS_ALT_RAPROXIMO_N">RA_REDE: Próximo Marcador</Name>
+        <Command>^C^C(if (rr:carrega-ra nil) (c:RA_PROXIMO))</Command>
+        <HelpString xlate="true" UID="XLS_LISPS_ALT_RAPROXIMO_H">RA_REDE.lsp: zoom no próximo marcador</HelpString>
+        <SmallImage Name="RCDATA_16_JOIN" />
+        <LargeImage Name="RCDATA_32_JOIN" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_LISPS_ALT_RALIMPAR">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_LISPS_ALT_RALIMPAR_N">RA_REDE: Limpar Marcadores</Name>
+        <Command>^C^C(if (rr:carrega-ra nil) (c:RA_LIMPAR))</Command>
+        <HelpString xlate="true" UID="XLS_LISPS_ALT_RALIMPAR_H">RA_REDE.lsp: apaga os marcadores</HelpString>
+        <SmallImage Name="RCDATA_16_ERASE" />
+        <LargeImage Name="RCDATA_32_ERASE" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_LISPS_ALT_RADESENHAR">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_LISPS_ALT_RADESENHAR_N">RA_REDE: Desenhar Linha da Rede</Name>
+        <Command>^C^C(if (rr:carrega-ra nil) (c:RA_DESENHAR))</Command>
+        <HelpString xlate="true" UID="XLS_LISPS_ALT_RADESENHAR_H">RA_REDE.lsp: desenha uma linha da rede e quebra as que ela toca</HelpString>
+        <SmallImage Name="RCDATA_16_JOIN" />
+        <LargeImage Name="RCDATA_32_JOIN" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_LISPS_ALT_RACONFIG">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_LISPS_ALT_RACONFIG_N">RA_REDE: Configurar</Name>
+        <Command>^C^C(if (rr:carrega-ra nil) (c:RA_CONFIG))</Command>
+        <HelpString xlate="true" UID="XLS_LISPS_ALT_RACONFIG_H">RA_REDE.lsp: filtro de camadas, tolerâncias e marcadores</HelpString>
+        <SmallImage Name="RCDATA_16_LAYCUR" />
+        <LargeImage Name="RCDATA_32_LAYCUR" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_LISPS_ALT_RAAJUDA">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_LISPS_ALT_RAAJUDA_N">RA_REDE: Ajuda</Name>
+        <Command>^C^C(if (rr:carrega-ra nil) (c:RA_AJUDA))</Command>
+        <HelpString xlate="true" UID="XLS_LISPS_ALT_RAAJUDA_H">RA_REDE.lsp: lista os comandos</HelpString>
+        <SmallImage Name="RCDATA_16_LAYCUR" />
+        <LargeImage Name="RCDATA_32_LAYCUR" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_LISPS_CLAGERENCIAR">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_LISPS_CLAGERENCIAR_N">Classificação Avançada</Name>
+        <Command>^C^CCLA_GERENCIAR</Command>
+        <HelpString xlate="true" UID="XLS_LISPS_CLAGERENCIAR_H">Tipo, CFT e grupo num só diálogo, remover classificação e mapa temático (equivalente ao KLA)</HelpString>
+        <SmallImage Name="RCDATA_16_LAYCUR" />
+        <LargeImage Name="RCDATA_32_LAYCUR" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_LISPS_CLACFT">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_LISPS_CLACFT_N">Definir Cliente, Fazenda e Talhão</Name>
+        <Command>^C^CCLA_CFT</Command>
+        <HelpString xlate="true" UID="XLS_LISPS_CLACFT_H">Define Cliente, Fazenda e Talhão dos objetos, com cadastro e legenda (CFT)</HelpString>
+        <SmallImage Name="RCDATA_16_LAYCUR" />
+        <LargeImage Name="RCDATA_32_LAYCUR" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_LISPS_CLAAUTO">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_LISPS_CLAAUTO_N">CFT Automático</Name>
+        <Command>^C^CCLA_AUTO</Command>
+        <HelpString xlate="true" UID="XLS_LISPS_CLAAUTO_H">Classifica CFT pelos layers, Object Data, textos ou atributos de blocos (CFL)</HelpString>
+        <SmallImage Name="RCDATA_16_LAYCUR" />
+        <LargeImage Name="RCDATA_32_LAYCUR" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_LISPS_CLACOPIAR">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_LISPS_CLACOPIAR_N">Copiar CFT</Name>
+        <Command>^C^CCLA_COPIAR</Command>
+        <HelpString xlate="true" UID="XLS_LISPS_CLACOPIAR_H">Copia o CFT de um objeto modelo para outros (CPCFT)</HelpString>
+        <SmallImage Name="RCDATA_16_LAYCUR" />
+        <LargeImage Name="RCDATA_32_LAYCUR" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_LISPS_CLAREMOVER">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_LISPS_CLAREMOVER_N">Remover CFT / Classificação</Name>
+        <Command>^C^CCLA_REMOVER</Command>
+        <HelpString xlate="true" UID="XLS_LISPS_CLAREMOVER_H">Desassocia Cliente, Fazenda e Talhão ou toda a classificação (RCFT)</HelpString>
+        <SmallImage Name="RCDATA_16_ERASE" />
+        <LargeImage Name="RCDATA_32_ERASE" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_LISPS_CLAFILTRO">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_LISPS_CLAFILTRO_N">Filtrar Talhões por CFT</Name>
+        <Command>^C^CCLA_FILTRO</Command>
+        <HelpString xlate="true" UID="XLS_LISPS_CLAFILTRO_H">Filtra e isola os objetos de um Cliente, Fazenda ou Talhão</HelpString>
+        <SmallImage Name="RCDATA_16_LAYCUR" />
+        <LargeImage Name="RCDATA_32_LAYCUR" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_LISPS_CLALEGENDA">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_LISPS_CLALEGENDA_N">Legenda de CFT</Name>
+        <Command>^C^CCLA_LEGENDA</Command>
+        <HelpString xlate="true" UID="XLS_LISPS_CLALEGENDA_H">Insere a legenda dos CFT e tipos classificados no desenho</HelpString>
+        <SmallImage Name="RCDATA_16_LAYCUR" />
+        <LargeImage Name="RCDATA_32_LAYCUR" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_LISPS_CLALIMEXT">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_LISPS_CLALIMEXT_N">Limite Externo</Name>
+        <Command>^C^CCLA_LIMEXT</Command>
+        <HelpString xlate="true" UID="XLS_LISPS_CLALIMEXT_H">Define o limite externo do talhão (JDBEX)</HelpString>
+        <SmallImage Name="RCDATA_16_TRIM" />
+        <LargeImage Name="RCDATA_32_TRIM" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_LISPS_CLALIMINT">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_LISPS_CLALIMINT_N">Limites Internos</Name>
+        <Command>^C^CCLA_LIMINT</Command>
+        <HelpString xlate="true" UID="XLS_LISPS_CLALIMINT_H">Classifica objetos como limites internos/ilhas, passáveis ou não (JDBIN)</HelpString>
+        <SmallImage Name="RCDATA_16_TRIM" />
+        <LargeImage Name="RCDATA_32_TRIM" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_LISPS_CLACABEXT">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_LISPS_CLACABEXT_N">Cabeceira Externa</Name>
+        <Command>^C^CCLA_CABEXT</Command>
+        <HelpString xlate="true" UID="XLS_LISPS_CLACABEXT_H">Classifica ou cria a área externa de manobra (JDHBEX)</HelpString>
+        <SmallImage Name="RCDATA_16_OFFSET" />
+        <LargeImage Name="RCDATA_32_OFFSET" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_LISPS_CLACABINT">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_LISPS_CLACABINT_N">Cabeceiras Internas</Name>
+        <Command>^C^CCLA_CABINT</Command>
+        <HelpString xlate="true" UID="XLS_LISPS_CLACABINT_H">Classifica ou cria as áreas internas de manobra (JDHBIN)</HelpString>
+        <SmallImage Name="RCDATA_16_OFFSET" />
+        <LargeImage Name="RCDATA_32_OFFSET" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_LISPS_CLACURVAAB">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_LISPS_CLACURVAAB_N">Curvas AB</Name>
+        <Command>^C^CCLA_CURVAAB</Command>
+        <HelpString xlate="true" UID="XLS_LISPS_CLACURVAAB_H">Define as curvas AB (JDABC)</HelpString>
+        <SmallImage Name="RCDATA_16_FILLET" />
+        <LargeImage Name="RCDATA_32_FILLET" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_LISPS_CLALINHAAB">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_LISPS_CLALINHAAB_N">Linhas AB</Name>
+        <Command>^C^CCLA_LINHAAB</Command>
+        <HelpString xlate="true" UID="XLS_LISPS_CLALINHAAB_H">Define as linhas AB (pistas retas) com o rumo como atributo (JDABL)</HelpString>
+        <SmallImage Name="RCDATA_16_JOIN" />
+        <LargeImage Name="RCDATA_32_JOIN" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_LISPS_CLAADAPT">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_LISPS_CLAADAPT_N">Curvas Adaptáveis</Name>
+        <Command>^C^CCLA_ADAPT</Command>
+        <HelpString xlate="true" UID="XLS_LISPS_CLAADAPT_H">Define as curvas adaptáveis (linhas de orientação) (JDLIN)</HelpString>
+        <SmallImage Name="RCDATA_16_OFFSET" />
+        <LargeImage Name="RCDATA_32_OFFSET" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_LISPS_CLAGLEBA">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_LISPS_CLAGLEBA_N">Grupos / Glebas</Name>
+        <Command>^C^CCLA_GLEBA</Command>
+        <HelpString xlate="true" UID="XLS_LISPS_CLAGLEBA_H">Define a que gleba/grupo pertencem as curvas (CGLE)</HelpString>
+        <SmallImage Name="RCDATA_16_LAYCUR" />
+        <LargeImage Name="RCDATA_32_LAYCUR" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_LISPS_CLAOBST">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_LISPS_CLAOBST_N">Obstáculos</Name>
+        <Command>^C^CCLA_OBST</Command>
+        <HelpString xlate="true" UID="XLS_LISPS_CLAOBST_H">Classifica pontos, círculos ou polígonos como obstáculos</HelpString>
+        <SmallImage Name="RCDATA_16_ERASE" />
+        <LargeImage Name="RCDATA_32_ERASE" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_LISPS_CLAMARCO">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_LISPS_CLAMARCO_N">Marcos (Flags)</Name>
+        <Command>^C^CCLA_MARCO</Command>
+        <HelpString xlate="true" UID="XLS_LISPS_CLAMARCO_H">Classifica pontos como marcos/flags</HelpString>
+        <SmallImage Name="RCDATA_16_JOIN" />
+        <LargeImage Name="RCDATA_32_JOIN" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_LISPS_CLAVER">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_LISPS_CLAVER_N">Modo de Visualização da Classificação</Name>
+        <Command>^C^CCLA_VER</Command>
+        <HelpString xlate="true" UID="XLS_LISPS_CLAVER_H">Liga/desliga o modo de visualização (cores por tipo, CFT ou grupo) (VV)</HelpString>
+        <SmallImage Name="RCDATA_16_LAYCUR" />
+        <LargeImage Name="RCDATA_32_LAYCUR" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_LISPS_GEOIMPORTAR">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_LISPS_GEOIMPORTAR_N">Importação Avançada</Name>
+        <Command>^C^CGEOIMPORTAR</Command>
+        <HelpString xlate="true" UID="XLS_LISPS_GEOIMPORTAR_H">Importa SHP, KML/KMZ, MIF, TAB, GML, DGN, SDF, SQLite e outros pelo MAPIMPORT (ou GeoJSON e outros pelo leitor próprio), trazendo os dados dos objetos como Object Data e convertendo para o sistema do desenho (equivalente ao GOIMP)</HelpString>
+        <SmallImage Name="RCDATA_16_IMPORT" />
+        <LargeImage Name="RCDATA_32_IMPORT" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_LISPS_GEOEXPORTAR">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_LISPS_GEOEXPORTAR_N">Exportação Avançada</Name>
+        <Command>^C^CGEOEXPORTAR</Command>
+        <HelpString xlate="true" UID="XLS_LISPS_GEOEXPORTAR_H">Exporta camadas ou objetos selecionados para SHP, SDF, MIF, GML (MAPEXPORT) ou KML e GeoJSON (WGS 84), com os dados de Object Data e a camada (equivalente ao GOEXP)</HelpString>
+        <SmallImage Name="RCDATA_16_EXPORT" />
+        <LargeImage Name="RCDATA_32_EXPORT" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_LISPS_GEOCALIBRA">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_LISPS_GEOCALIBRA_N">Calibrar Object Data do MAPIMPORT</Name>
+        <Command>^C^CGEOCALIBRA</Command>
+        <HelpString xlate="true" UID="XLS_LISPS_GEOCALIBRA_H">Lê um perfil .ipf salvo no MAPIMPORT com Create Object Data para o GEOIMPORTAR usar os mesmos valores em formatos que não são SHP</HelpString>
+        <SmallImage Name="RCDATA_16_IMPORT" />
+        <LargeImage Name="RCDATA_32_IMPORT" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_LISPS_IMPKML">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_LISPS_IMPKML_N">Importar KML / KMZ</Name>
+        <Command>^C^CIMPKML</Command>
+        <HelpString xlate="true" UID="XLS_LISPS_IMPKML_H">Importa arquivos KML/KMZ do Google Earth (pontos, linhas, polígonos com furos, pastas e ExtendedData como atributos), convertendo de WGS 84 para o sistema do desenho</HelpString>
+        <SmallImage Name="RCDATA_16_IMPORT" />
+        <LargeImage Name="RCDATA_32_IMPORT" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_LISPS_IMPGEOJSON">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_LISPS_IMPGEOJSON_N">Importar GeoJSON</Name>
+        <Command>^C^CIMPGEOJSON</Command>
+        <HelpString xlate="true" UID="XLS_LISPS_IMPGEOJSON_H">Importa GeoJSON (todos os tipos de geometria; properties como atributos em Object Data ou XDATA; sistema pelo membro crs ou WGS 84)</HelpString>
+        <SmallImage Name="RCDATA_16_IMPORT" />
+        <LargeImage Name="RCDATA_32_IMPORT" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_LISPS_IMPSHP">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_LISPS_IMPSHP_N">Importar Shapefile</Name>
+        <Command>^C^CIMPSHP</Command>
+        <HelpString xlate="true" UID="XLS_LISPS_IMPSHP_H">Importa Shapefile (.shp + .dbf + .prj + .cpg): pontos, linhas e polígonos, com Z, atributos da tabela em Object Data ou XDATA e conversão pelo .prj</HelpString>
+        <SmallImage Name="RCDATA_16_IMPORT" />
+        <LargeImage Name="RCDATA_32_IMPORT" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_LISPS_SIMPLIFICAPL">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_LISPS_SMP_N">Simplificar Polilinhas</Name>
+        <Command>^C^CSIMPLIFICAPL</Command>
+        <HelpString xlate="true" UID="XLS_LISPS_SMP_H">Reduz a quantidade de vértices de polilinhas sem que a curva se afaste mais que a tolerância de desvio (Douglas-Peucker); arcos e pontas são preservados</HelpString>
+        <SmallImage Name="RCDATA_16_PEDIT" />
+        <LargeImage Name="RCDATA_32_PEDIT" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_LISPS_SEGMENTARCOS">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_LISPS_SEGA_N">Segmentar Arcos</Name>
+        <Command>^C^CSEGMENTARCOS</Command>
+        <HelpString xlate="true" UID="XLS_LISPS_SEGA_H">Converte os arcos das polilinhas (e, opcionalmente, arcos e círculos avulsos) em segmentos de reta, por desvio máximo (flecha) ou medida fixa</HelpString>
+        <SmallImage Name="RCDATA_16_DIVIDE" />
+        <LargeImage Name="RCDATA_32_DIVIDE" />
       </Macro>
     </MenuMacro>
   </MacroGroup>

@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+Warning! Do not edit the contents of this file.
+If you attempt to edit this file using an XML editor, you could lose
+customization and migration functionality. If you need to change
+information in the customization file, use the Customize User Interface
+dialog in the product.
+To access the Customize User Interface dialog, click the Tools menu,
+Customization panel, User Interface button, or enter CUI on the command line.
+-->
+<PopMenuRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <PopMenu hasDiesel="false" UID="PM_FT_MAIN">
+    <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+    <Alias>POP1</Alias>
+    <Alias>FARMTOOLS</Alias>
+    <Name xlate="true" UID="XLS_FT_POP_MAIN">&amp;FarmTools</Name>
+    <PopMenuRef pUID="PM_FT_AJUSTES" UID="PMR_FT_AJUSTES">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+    </PopMenuRef>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_FT_SC">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_FT_PMI_SC" xlate="true">Coordenadas e &amp;Unidades (SISCOORD)</NameRef>
+      <MenuItem>
+        <MacroRef MenuMacroID="MM_FT_SISCOORD" />
+      </MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_FT_VP">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_FT_PMI_VP" xlate="true">&amp;Verificar Projeto (VERIFICAPROJ)</NameRef>
+      <MenuItem>
+        <MacroRef MenuMacroID="MM_FT_VERIFICAPROJ" />
+      </MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_FT_VPL">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_FT_PMI_VPL" xlate="true">Apagar &amp;Marcas da Verificação (VERIFICAPROJ_LIMPA)</NameRef>
+      <MenuItem>
+        <MacroRef MenuMacroID="MM_FT_VERIFICAPROJ_LIMPA" />
+      </MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_FT_CL">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_FT_PMI_CL" xlate="true">&amp;Criar Linhas (CRIALINHAS)</NameRef>
+      <MenuItem>
+        <MacroRef MenuMacroID="MM_FT_CRIALINHAS" />
+      </MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_FT_CLCFG">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_FT_PMI_CLCFG" xlate="true">Configurar Criar Linhas (CRIALINHASCFG)</NameRef>
+      <MenuItem>
+        <MacroRef MenuMacroID="MM_FT_CRIALINHASCFG" />
+      </MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_FT_CN">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_FT_PMI_CN" xlate="true">C&amp;onectar Linhas (CONECTALINHAS)</NameRef>
+      <MenuItem>
+        <MacroRef MenuMacroID="MM_FT_CONECTALINHAS" />
+      </MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_FT_CR">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_FT_PMI_CR" xlate="true">Ca&amp;rreadores (CARREADORES)</NameRef>
+      <MenuItem>
+        <MacroRef MenuMacroID="MM_FT_CARREADORES" />
+      </MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_FT_SCC">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_FT_PMI_SCC" xlate="true">Concordar &amp;Eixos (SIS_CONCORDAR)</NameRef>
+      <MenuItem>
+        <MacroRef MenuMacroID="MM_FT_SIS_CONCORDAR" />
+      </MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="true" UID="PMI_FT_SEP_RA">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+    </PopMenuItem>
+    <PopMenuRef pUID="PM_FT_RAREDE" UID="PMR_FT_RAREDE">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+    </PopMenuRef>
+  </PopMenu>
+  <PopMenu hasDiesel="false" UID="PM_FT_AJUSTES">
+    <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+    <Name xlate="true" UID="XLS_FT_POP_AJUSTES">&amp;Ajustes</Name>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_FT_TRLE">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_FT_PMI_TRLE" xlate="true">Transformar em &amp;Limite Externo (TR-LE)</NameRef>
+      <MenuItem>
+        <MacroRef MenuMacroID="MM_FT_TRLE" />
+      </MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_FT_TRLI">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_FT_PMI_TRLI" xlate="true">Transformar em Limite &amp;Interno (TR-LI)</NameRef>
+      <MenuItem>
+        <MacroRef MenuMacroID="MM_FT_TRLI" />
+      </MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_FT_TRSU">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_FT_PMI_TRSU" xlate="true">Transformar em &amp;Guidelines (TR-GL)</NameRef>
+      <MenuItem>
+        <MacroRef MenuMacroID="MM_FT_TRSU" />
+      </MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_FT_TRTA">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_FT_PMI_TRTA" xlate="true">Transformar em &amp;Talhão (TR-TA)</NameRef>
+      <MenuItem>
+        <MacroRef MenuMacroID="MM_FT_TRTA" />
+      </MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_FT_TRTE">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_FT_PMI_TRTE" xlate="true">Transformar em T&amp;erraço (TR-TE)</NameRef>
+      <MenuItem>
+        <MacroRef MenuMacroID="MM_FT_TRTE" />
+      </MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_FT_TRCO">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_FT_PMI_TRCO" xlate="true">Transformar em &amp;Fileiras (TR-FI)</NameRef>
+      <MenuItem>
+        <MacroRef MenuMacroID="MM_FT_TRCO" />
+      </MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="true" UID="PMI_FT_SEP_LAYERS">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_FT_CRIALAYERS">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_FT_PMI_CRIALAYERS" xlate="true">Criar &amp;Padrão de Layers (CRIALAYERS)</NameRef>
+      <MenuItem>
+        <MacroRef MenuMacroID="MM_FT_CRIALAYERS" />
+      </MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="true" UID="PMI_FT_SEP1">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_FT_CORTALIM">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_FT_PMI_CORTALIM" xlate="true">C&amp;ortar linhas pelo limite (CORTALIM)</NameRef>
+      <MenuItem>
+        <MacroRef MenuMacroID="MM_FT_CORTALIM" />
+      </MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_FT_ESTENDELIM">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_FT_PMI_ESTENDELIM" xlate="true">Este&amp;nder linhas até o limite (ESTENDELIM)</NameRef>
+      <MenuItem>
+        <MacroRef MenuMacroID="MM_FT_ESTENDELIM" />
+      </MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_FT_AJUSTALIM">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_FT_PMI_AJUSTALIM" xlate="true">Estender e cortar até o limite (&amp;AJUSTALIM)</NameRef>
+      <MenuItem>
+        <MacroRef MenuMacroID="MM_FT_AJUSTALIM" />
+      </MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_FT_APAGALIM">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_FT_PMI_APAGALIM" xlate="true">A&amp;pagar dentro/fora de limite (APAGALIM)</NameRef>
+      <MenuItem>
+        <MacroRef MenuMacroID="MM_FT_APAGALIM" />
+      </MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="true" UID="PMI_FT_SEP_GEOM">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_FT_SMP">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_FT_PMI_SMP" xlate="true">Si&amp;mplificar Polilinhas (SIMPLIFICAPL)</NameRef>
+      <MenuItem>
+        <MacroRef MenuMacroID="MM_FT_SIMPLIFICAPL" />
+      </MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_FT_SEGA">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_FT_PMI_SEGA" xlate="true">Segmentar A&amp;rcos (SEGMENTARCOS)</NameRef>
+      <MenuItem>
+        <MacroRef MenuMacroID="MM_FT_SEGMENTARCOS" />
+      </MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_FT_RN">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_FT_PMI_RN" xlate="true">Remover &amp;Nós (REMOVENOS)</NameRef>
+      <MenuItem>
+        <MacroRef MenuMacroID="MM_FT_REMOVENOS" />
+      </MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_FT_PV">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_FT_PMI_PV" xlate="true">&amp;Padronizar Vértices (PADRONIZAVERT)</NameRef>
+      <MenuItem>
+        <MacroRef MenuMacroID="MM_FT_PADRONIZAVERT" />
+      </MenuItem>
+    </PopMenuItem>
+  </PopMenu>
+  <PopMenu hasDiesel="false" UID="PM_FT_RAREDE">
+    <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+    <Name xlate="true" UID="XLS_FT_POP_RAREDE">&amp;Rede de Rotas</Name>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_FT_ALT_RAVERIFICAR">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_FT_PMI_ALT_RAVERIFICAR" xlate="true">Verificar (RA_VERIFICAR)</NameRef>
+      <MenuItem>
+        <MacroRef MenuMacroID="MM_FT_ALT_RAVERIFICAR" />
+      </MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_FT_ALT_RACORRIGIR">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_FT_PMI_ALT_RACORRIGIR" xlate="true">Corrigir Tudo (RA_CORRIGIR)</NameRef>
+      <MenuItem>
+        <MacroRef MenuMacroID="MM_FT_ALT_RACORRIGIR" />
+      </MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_FT_ALT_RAQUEBRAR">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_FT_PMI_ALT_RAQUEBRAR" xlate="true">Quebrar nos Entroncamentos (RA_QUEBRAR)</NameRef>
+      <MenuItem>
+        <MacroRef MenuMacroID="MM_FT_ALT_RAQUEBRAR" />
+      </MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_FT_ALT_RAPONTAS">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_FT_PMI_ALT_RAPONTAS" xlate="true">Ligar Pontas Soltas (RA_PONTAS)</NameRef>
+      <MenuItem>
+        <MacroRef MenuMacroID="MM_FT_ALT_RAPONTAS" />
+      </MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_FT_ALT_RAJUNTAR">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_FT_PMI_ALT_RAJUNTAR" xlate="true">Emendar Pseudo-nós (RA_JUNTAR)</NameRef>
+      <MenuItem>
+        <MacroRef MenuMacroID="MM_FT_ALT_RAJUNTAR" />
+      </MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_FT_ALT_SEGMENTARCOS">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_FT_PMI_ALT_SEGMENTARCOS" xlate="true">Segmentar Arcos (SEGMENTARCOS)</NameRef>
+      <MenuItem>
+        <MacroRef MenuMacroID="MM_FT_SEGMENTARCOS" />
+      </MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_FT_ALT_RASEMCONEXAO">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_FT_PMI_ALT_RASEMCONEXAO" xlate="true">Marcar Sem Conexão (viaduto) (RA_SEMCONEXAO)</NameRef>
+      <MenuItem>
+        <MacroRef MenuMacroID="MM_FT_ALT_RASEMCONEXAO" />
+      </MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_FT_ALT_RAPROXIMO">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_FT_PMI_ALT_RAPROXIMO" xlate="true">Próximo Marcador (RA_PROXIMO)</NameRef>
+      <MenuItem>
+        <MacroRef MenuMacroID="MM_FT_ALT_RAPROXIMO" />
+      </MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_FT_ALT_RALIMPAR">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_FT_PMI_ALT_RALIMPAR" xlate="true">Limpar Marcadores (RA_LIMPAR)</NameRef>
+      <MenuItem>
+        <MacroRef MenuMacroID="MM_FT_ALT_RALIMPAR" />
+      </MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_FT_ALT_RADESENHAR">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_FT_PMI_ALT_RADESENHAR" xlate="true">Desenhar Linha da Rede (RA_DESENHAR)</NameRef>
+      <MenuItem>
+        <MacroRef MenuMacroID="MM_FT_ALT_RADESENHAR" />
+      </MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_FT_RAE">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_FT_PMI_RAE" xlate="true">&amp;Exportar Rede em GeoJSON (REDE_EXPORTAR)</NameRef>
+      <MenuItem>
+        <MacroRef MenuMacroID="MM_FT_RA_EXPORTAR" />
+      </MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_FT_ALT_RACONFIG">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_FT_PMI_ALT_RACONFIG" xlate="true">&amp;Configurar... (REDE_CONFIG)</NameRef>
+      <MenuItem>
+        <MacroRef MenuMacroID="MM_FT_ALT_RACONFIG" />
+      </MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_FT_ALT_RAAJUDA">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_FT_PMI_ALT_RAAJUDA" xlate="true">Ajuda (RA_AJUDA)</NameRef>
+      <MenuItem>
+        <MacroRef MenuMacroID="MM_FT_ALT_RAAJUDA" />
+      </MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="true" UID="PMI_FT_SEP_ALT">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_FT_ALT_REDECARREGARA">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_FT_PMI_ALT_REDECARREGARA" xlate="true">Recarregar RA_REDE (REDE_CARREGA_RA)</NameRef>
+      <MenuItem>
+        <MacroRef MenuMacroID="MM_FT_ALT_REDECARREGARA" />
+      </MenuItem>
+    </PopMenuItem>
+  </PopMenu>
+</PopMenuRoot>

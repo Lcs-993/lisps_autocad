@@ -1,15 +1,23 @@
-# Empacota menu\src\* em menu\LISPS.cuix (CUIx = pacote ZIP/OPC).
+# Empacota menu\src\* em menu\FarmTools.cuix (CUIx = pacote ZIP/OPC).
 # Uso:  pwsh -File menu\build_cuix.ps1
-# Feche o menu no AutoCAD (CUIUNLOAD LISPS) antes de regerar, senao o arquivo fica travado.
+# Feche o menu no AutoCAD (CUIUNLOAD FARMTOOLS) antes de regerar, senao o arquivo fica travado.
+# O menu antigo (LISPS) fica em menu\legado e tem o proprio build_cuix.ps1.
+#
+# Icones: os PNG de menu\icons\png\<Tema> (padrao: dark) vao para a raiz do pacote.
+# Para ligar icones a comandos, edite menu\icons\icons.json e rode antes:  python menu\aplicar_icones.py
+# Tema claro:  pwsh -File menu\build_cuix.ps1 -Tema light
+param([ValidateSet('dark', 'light')][string]$Tema = 'dark')
 $ErrorActionPreference = 'Stop'
 Add-Type -AssemblyName System.IO.Compression, System.IO.Compression.FileSystem
 
-$src = Join-Path $PSScriptRoot 'src'
-$out = Join-Path $PSScriptRoot 'LISPS.cuix'
+$src   = Join-Path $PSScriptRoot 'src'
+$out   = Join-Path $PSScriptRoot 'FarmTools.cuix'
+$icons = Get-ChildItem (Join-Path $PSScriptRoot "icons\png\$Tema") -Filter 'ft-*.png' -File
 
 # Menu_Package_Info.xml com a data de modificacao de cada parte
 $now   = (Get-Date).ToString('yyyy-MM-ddTHH:mm:ss.fffffffzzz')
-$parts = '/Header.cui', '/MenuGroup.cui', '/PopMenuRoot.cui', '/RibbonRoot.cui', '/Menu_Package_Info.xml'
+$parts = @('/Header.cui', '/MenuGroup.cui', '/PopMenuRoot.cui', '/RibbonRoot.cui', '/Menu_Package_Info.xml') +
+         ($icons | ForEach-Object { '/' + $_.Name })
 $info  = "<?xml version=`"1.0`" encoding=`"utf-8`"?>`r`n<MenuPackageParts>`r`n"
 foreach ($p in $parts) { $info += "  <PartData PartData_Name=`"$p`" PartData_Modified=`"$now`" />`r`n" }
 $info += "</MenuPackageParts>"
@@ -22,6 +30,9 @@ try {
         $entry = $_.FullName.Substring($src.Length + 1).Replace('\', '/')
         [void][IO.Compression.ZipFileExtensions]::CreateEntryFromFile($zip, $_.FullName, $entry)
     }
+    foreach ($i in $icons) {
+        [void][IO.Compression.ZipFileExtensions]::CreateEntryFromFile($zip, $i.FullName, $i.Name)
+    }
 } finally { $zip.Dispose() }
 
-Write-Host "Gerado: $out"
+Write-Host "Gerado: $out ($($icons.Count) icones, tema $Tema)"

@@ -1,0 +1,410 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+Warning! Do not edit the contents of this file.
+If you attempt to edit this file using an XML editor, you could lose
+customization and migration functionality. If you need to change
+information in the customization file, use the Customize User Interface
+dialog in the product.
+To access the Customize User Interface dialog, click the Tools menu,
+Customization panel, User Interface button, or enter CUI on the command line.
+-->
+<MenuGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="FARMTOOLS" DisplayName="FarmTools">
+  <MacroGroup Name="FarmToolsMacros" Citizen="A">
+    <MenuMacro UID="MM_FT_TRLE">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_FT_TRLE_N">Transformar em Limite Externo</Name>
+        <Command>^C^CTR-LE</Command>
+        <HelpString xlate="true" UID="XLS_FT_TRLE_H">Troca rapidamente o layer dos objetos selecionados para o de limite externo (LIMITE_EXTERNO)</HelpString>
+        <SmallImage Name="ft-tr-le-16.png" />
+        <LargeImage Name="ft-tr-le-32.png" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_FT_CRIALINHAS">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_FT_CL_N">Criar Linhas</Name>
+        <Command>^C^CCRIALINHAS</Command>
+        <HelpString xlate="true" UID="XLS_FT_CL_H">Cria linhas guias e de plantio (sulcação, plantio e colheita) dentro dos talhões, uma curva de referência por vez (estilo CPT)</HelpString>
+        <SmallImage Name="ft-crialinhas-16.png" />
+        <LargeImage Name="ft-crialinhas-32.png" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_FT_CRIALINHASCFG">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_FT_CLCFG_N">Configurar Criar Linhas</Name>
+        <Command>^C^CCRIALINHASCFG</Command>
+        <HelpString xlate="true" UID="XLS_FT_CLCFG_H">Abre a configuração do CRIALINHAS (tipo de geração, espaçamentos, predefinições) sem criar linhas</HelpString>
+        <SmallImage Name="ft-crialinhas-16.png" />
+        <LargeImage Name="ft-crialinhas-32.png" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_FT_CONECTALINHAS">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_FT_CN_N">Conectar Linhas</Name>
+        <Command>^C^CCONECTALINHAS</Command>
+        <HelpString xlate="true" UID="XLS_FT_CN_H">Conecta as linhas da mesma fileira em talhões vizinhos (através dos carreadores) numa polilinha contínua, para reduzir manobras. Equivalente ao GOCON do AgroCAD</HelpString>
+        <SmallImage Name="ft-conectalinhas-16.png" />
+        <LargeImage Name="ft-conectalinhas-32.png" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_FT_CARREADORES">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_FT_CR_N">Carreadores</Name>
+        <Command>^C^CCARREADORES</Command>
+        <HelpString xlate="true" UID="XLS_FT_CR_H">Corta os talhões por faixas de carreador em volta dos eixos e desenha os carreadores; Juntar Talhões desfaz carreadores. Equivalente ao GOROA do AgroCAD</HelpString>
+        <SmallImage Name="ft-carreadores-16.png" />
+        <LargeImage Name="ft-carreadores-32.png" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_FT_SISCOORD">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_FT_SC_N">Coordenadas e Unidades</Name>
+        <Command>^C^CSISCOORD</Command>
+        <HelpString xlate="true" UID="XLS_FT_SC_H">Configura o sistema de coordenadas do projeto atual (Sirgas 2000, WGS84, SAD69, Córrego Alegre) e as unidades do projeto. Equivalente ao CSYS do AgroCAD</HelpString>
+        <SmallImage Name="ft-siscoord-16.png" />
+        <LargeImage Name="ft-siscoord-32.png" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_FT_VERIFICAPROJ">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_FT_VP_N">Verificar Projeto</Name>
+        <Command>^C^CVERIFICAPROJ</Command>
+        <HelpString xlate="true" UID="XLS_FT_VP_H">Checagem geral do projeto: polilinhas 3D em 2D, linhas em polilinhas, segmentar arcos e fechar talhões; marca auto-cruzamentos, pseudo-nós e splines. Equivalente ao CHECKDWG do AgroCAD</HelpString>
+        <SmallImage Name="ft-verificaproj-16.png" />
+        <LargeImage Name="ft-verificaproj-32.png" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_FT_VERIFICAPROJ_LIMPA">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_FT_VPL_N">Apagar Marcas da Verificação</Name>
+        <Command>^C^CVERIFICAPROJ_LIMPA</Command>
+        <HelpString xlate="true" UID="XLS_FT_VPL_H">Apaga os círculos de marcação deixados pelo Verificar Projeto (camadas VERIFICA_*)</HelpString>
+        <SmallImage Name="ft-ra-limpar-16.png" />
+        <LargeImage Name="ft-ra-limpar-32.png" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_FT_SIS_CONCORDAR">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_FT_SCC_N">Concordar Eixos</Name>
+        <Command>^C^CSIS_CONCORDAR</Command>
+        <HelpString xlate="true" UID="XLS_FT_SCC_H">Concordância de eixos de estradas: arcos de raio R nos cruzamentos (T, X, L) com quebra no nó, ou praça em volta de ilhas/obstáculos com bifurcação e fusão e quebra nas tangências</HelpString>
+        <SmallImage Name="ft-concordar-16.png" />
+        <LargeImage Name="ft-concordar-32.png" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_FT_TRLI">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_FT_TRLI_N">Transformar em Limite Interno</Name>
+        <Command>^C^CTR-LI</Command>
+        <HelpString xlate="true" UID="XLS_FT_TRLI_H">Troca rapidamente o layer dos objetos selecionados para o de limite interno (LIMITE_INTERNO)</HelpString>
+        <SmallImage Name="ft-tr-li-16.png" />
+        <LargeImage Name="ft-tr-li-32.png" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_FT_TRSU">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_FT_TRSU_N">Transformar em Guidelines</Name>
+        <Command>^C^CTR-GL</Command>
+        <HelpString xlate="true" UID="XLS_FT_TRSU_H">Troca rapidamente o layer dos objetos selecionados para o de guidelines (GUIDELINES, o mesmo do Criar Linhas)</HelpString>
+        <SmallImage Name="ft-tr-su-16.png" />
+        <LargeImage Name="ft-tr-su-32.png" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_FT_TRTA">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_FT_TRTA_N">Transformar em Talhão</Name>
+        <Command>^C^CTR-TA</Command>
+        <HelpString xlate="true" UID="XLS_FT_TRTA_H">Troca rapidamente o layer dos objetos selecionados para o de talhão (TALHÕES)</HelpString>
+        <SmallImage Name="ft-tr-ta-16.png" />
+        <LargeImage Name="ft-tr-ta-32.png" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_FT_TRTE">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_FT_TRTE_N">Transformar em Terraço</Name>
+        <Command>^C^CTR-TE</Command>
+        <HelpString xlate="true" UID="XLS_FT_TRTE_H">Troca rapidamente o layer dos objetos selecionados para o de terraço (TERRAÇOS)</HelpString>
+        <SmallImage Name="ft-tr-te-16.png" />
+        <LargeImage Name="ft-tr-te-32.png" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_FT_TRCO">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_FT_TRCO_N">Transformar em Fileiras</Name>
+        <Command>^C^CTR-FI</Command>
+        <HelpString xlate="true" UID="XLS_FT_TRCO_H">Troca rapidamente o layer dos objetos selecionados para o de fileiras de plantio (CROPLINES, o mesmo do Criar Linhas)</HelpString>
+        <SmallImage Name="ft-tr-co-16.png" />
+        <LargeImage Name="ft-tr-co-32.png" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_FT_CRIALAYERS">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_FT_CRIALAYERS_N">Criar Padrão de Layers</Name>
+        <Command>^C^CCRIALAYERS</Command>
+        <HelpString xlate="true" UID="XLS_FT_CRIALAYERS_H">Cria no desenho os layers padrão do projeto que faltarem (limites, talhões, terraços, guidelines, fileiras, carreadores e rede de rotas); os existentes não são alterados</HelpString>
+        <SmallImage Name="ft-crialayers-16.png" />
+        <LargeImage Name="ft-crialayers-32.png" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_FT_CORTALIM">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_FT_CORTALIM_N">Cortar linhas pelo limite do talhão</Name>
+        <Command>^C^CCORTALIM</Command>
+        <HelpString xlate="true" UID="XLS_FT_CORTALIM_H">Corta os trechos das linhas que ultrapassam os limites dos talhões selecionados, mantendo as propriedades das linhas originais</HelpString>
+        <SmallImage Name="ft-cortalim-16.png" />
+        <LargeImage Name="ft-cortalim-32.png" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_FT_ESTENDELIM">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_FT_ESTENDELIM_N">Estender linhas até o limite do talhão</Name>
+        <Command>^C^CESTENDELIM</Command>
+        <HelpString xlate="true" UID="XLS_FT_ESTENDELIM_H">Estende as pontas das linhas selecionadas, pela tangente, até o limite do talhão que as contém</HelpString>
+        <SmallImage Name="ft-estendelim-16.png" />
+        <LargeImage Name="ft-estendelim-32.png" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_FT_AJUSTALIM">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_FT_AJUSTALIM_N">Estender e cortar linhas até o limite do talhão</Name>
+        <Command>^C^CAJUSTALIM</Command>
+        <HelpString xlate="true" UID="XLS_FT_AJUSTALIM_H">Estende as pontas que estão dentro do talhão e corta os trechos que ultrapassam o limite</HelpString>
+        <SmallImage Name="ft-ajustalim-16.png" />
+        <LargeImage Name="ft-ajustalim-32.png" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_FT_APAGALIM">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_FT_APAGALIM_N">Apagar objetos dentro ou fora de limite</Name>
+        <Command>^C^CAPAGALIM</Command>
+        <HelpString xlate="true" UID="XLS_FT_APAGALIM_H">Apaga objetos inteira ou parcialmente contidos (ou fora de) uma polilinha fechada, independente do zoom</HelpString>
+        <SmallImage Name="ft-apagalim-16.png" />
+        <LargeImage Name="ft-apagalim-32.png" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_FT_RA_EXPORTAR">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_FT_RAE_N">Rede de Rotas: Exportar Rede (GeoJSON)</Name>
+        <Command>^C^CREDE_EXPORTAR</Command>
+        <HelpString xlate="true" UID="XLS_FT_RAE_H">Exporta as linhas da rede em GeoJSON com o membro crs do EPSG (arcos viram vértices), pronto para o Routes Analyzer</HelpString>
+        <SmallImage Name="ft-rede-exportar-16.png" />
+        <LargeImage Name="ft-rede-exportar-32.png" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_FT_ALT_REDECARREGARA">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_FT_ALT_REDECARREGARA_N">Rede de Rotas: Recarregar RA_REDE</Name>
+        <Command>^C^CREDE_CARREGA_RA</Command>
+        <HelpString xlate="true" UID="XLS_FT_ALT_REDECARREGARA_H">Recarrega routes_analyzer\tools\autocad\RA_REDE.lsp (os comandos da rede já carregam sozinhos na primeira vez)</HelpString>
+        <SmallImage Name="ft-ra-carregar-16.png" />
+        <LargeImage Name="ft-ra-carregar-32.png" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_FT_ALT_RAVERIFICAR">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_FT_ALT_RAVERIFICAR_N">Rede de Rotas: Verificar</Name>
+        <Command>^C^C(if (rr:carrega-ra nil) (c:RA_VERIFICAR))</Command>
+        <HelpString xlate="true" UID="XLS_FT_ALT_RAVERIFICAR_H">RA_REDE.lsp: verifica a rede e marca os problemas no layer RA_ERROS (não altera as linhas)</HelpString>
+        <SmallImage Name="ft-rede-validar-16.png" />
+        <LargeImage Name="ft-rede-validar-32.png" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_FT_ALT_RACORRIGIR">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_FT_ALT_RACORRIGIR_N">Rede de Rotas: Corrigir Tudo</Name>
+        <Command>^C^C(if (rr:carrega-ra nil) (c:RA_CORRIGIR))</Command>
+        <HelpString xlate="true" UID="XLS_FT_ALT_RACORRIGIR_H">RA_REDE.lsp: apaga duplicadas, liga pontas soltas, quebra nos entroncamentos, emenda pseudo-nós e verifica de novo</HelpString>
+        <SmallImage Name="ft-rede-corrigir-16.png" />
+        <LargeImage Name="ft-rede-corrigir-32.png" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_FT_ALT_RAQUEBRAR">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_FT_ALT_RAQUEBRAR_N">Rede de Rotas: Quebrar nos Entroncamentos</Name>
+        <Command>^C^C(if (rr:carrega-ra nil) (c:RA_QUEBRAR))</Command>
+        <HelpString xlate="true" UID="XLS_FT_ALT_RAQUEBRAR_H">RA_REDE.lsp: quebra as linhas em todos os entroncamentos e cruzamentos</HelpString>
+        <SmallImage Name="ft-ra-quebrar-16.png" />
+        <LargeImage Name="ft-ra-quebrar-32.png" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_FT_ALT_RAPONTAS">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_FT_ALT_RAPONTAS_N">Rede de Rotas: Ligar Pontas Soltas</Name>
+        <Command>^C^C(if (rr:carrega-ra nil) (c:RA_PONTAS))</Command>
+        <HelpString xlate="true" UID="XLS_FT_ALT_RAPONTAS_H">RA_REDE.lsp: leva cada ponta solta até a linha ou vértice mais próximo e quebra</HelpString>
+        <SmallImage Name="ft-ra-pontas-16.png" />
+        <LargeImage Name="ft-ra-pontas-32.png" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_FT_ALT_RAJUNTAR">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_FT_ALT_RAJUNTAR_N">Rede de Rotas: Emendar Pseudo-nós</Name>
+        <Command>^C^C(if (rr:carrega-ra nil) (c:RA_JUNTAR))</Command>
+        <HelpString xlate="true" UID="XLS_FT_ALT_RAJUNTAR_H">RA_REDE.lsp: emenda as linhas que se encontram em pseudo-nós</HelpString>
+        <SmallImage Name="ft-ra-juntar-16.png" />
+        <LargeImage Name="ft-ra-juntar-32.png" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_FT_ALT_RASEMCONEXAO">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_FT_ALT_RASEMCONEXAO_N">Rede de Rotas: Marcar Sem Conexão (viaduto)</Name>
+        <Command>^C^C(if (rr:carrega-ra nil) (c:RA_SEMCONEXAO))</Command>
+        <HelpString xlate="true" UID="XLS_FT_ALT_RASEMCONEXAO_H">RA_REDE.lsp: marca um cruzamento que não deve ser ligado</HelpString>
+        <SmallImage Name="ft-ra-semconexao-16.png" />
+        <LargeImage Name="ft-ra-semconexao-32.png" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_FT_ALT_RAPROXIMO">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_FT_ALT_RAPROXIMO_N">Rede de Rotas: Próximo Marcador</Name>
+        <Command>^C^C(if (rr:carrega-ra nil) (c:RA_PROXIMO))</Command>
+        <HelpString xlate="true" UID="XLS_FT_ALT_RAPROXIMO_H">RA_REDE.lsp: zoom no próximo marcador</HelpString>
+        <SmallImage Name="ft-rede-proximo-16.png" />
+        <LargeImage Name="ft-rede-proximo-32.png" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_FT_ALT_RALIMPAR">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_FT_ALT_RALIMPAR_N">Rede de Rotas: Limpar Marcadores</Name>
+        <Command>^C^C(if (rr:carrega-ra nil) (c:RA_LIMPAR))</Command>
+        <HelpString xlate="true" UID="XLS_FT_ALT_RALIMPAR_H">RA_REDE.lsp: apaga os marcadores</HelpString>
+        <SmallImage Name="ft-ra-limpar-16.png" />
+        <LargeImage Name="ft-ra-limpar-32.png" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_FT_ALT_RADESENHAR">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_FT_ALT_RADESENHAR_N">Rede de Rotas: Desenhar Linha da Rede</Name>
+        <Command>^C^C(if (rr:carrega-ra nil) (c:RA_DESENHAR))</Command>
+        <HelpString xlate="true" UID="XLS_FT_ALT_RADESENHAR_H">RA_REDE.lsp: desenha uma linha da rede e quebra as que ela toca</HelpString>
+        <SmallImage Name="ft-ra-desenhar-16.png" />
+        <LargeImage Name="ft-ra-desenhar-32.png" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_FT_ALT_RACONFIG">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_FT_ALT_RACONFIG_N">Rede de Rotas: Configurar</Name>
+        <Command>^C^CREDE_CONFIG</Command>
+        <HelpString xlate="true" UID="XLS_FT_ALT_RACONFIG_H">Abre o diálogo de configuração da Rede de Rotas: camadas da rede, de desenho e de mão única, tolerâncias e marcadores (grava para todos os desenhos)</HelpString>
+        <SmallImage Name="ft-ra-config-16.png" />
+        <LargeImage Name="ft-ra-config-32.png" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_FT_ALT_RAAJUDA">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_FT_ALT_RAAJUDA_N">Rede de Rotas: Ajuda</Name>
+        <Command>^C^C(if (rr:carrega-ra nil) (c:RA_AJUDA))</Command>
+        <HelpString xlate="true" UID="XLS_FT_ALT_RAAJUDA_H">RA_REDE.lsp: lista os comandos</HelpString>
+        <SmallImage Name="ft-ra-ajuda-16.png" />
+        <LargeImage Name="ft-ra-ajuda-32.png" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_FT_SIMPLIFICAPL">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_FT_SMP_N">Simplificar Polilinhas</Name>
+        <Command>^C^CSIMPLIFICAPL</Command>
+        <HelpString xlate="true" UID="XLS_FT_SMP_H">Reduz a quantidade de vértices de polilinhas sem que a curva se afaste mais que a tolerância de desvio (Douglas-Peucker); arcos e pontas são preservados</HelpString>
+        <SmallImage Name="ft-simplificapl-16.png" />
+        <LargeImage Name="ft-simplificapl-32.png" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_FT_SEGMENTARCOS">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_FT_SEGA_N">Segmentar Arcos</Name>
+        <Command>^C^CSEGMENTARCOS</Command>
+        <HelpString xlate="true" UID="XLS_FT_SEGA_H">Converte os arcos das polilinhas (e, opcionalmente, arcos e círculos avulsos) em segmentos de reta, por desvio máximo (flecha) ou medida fixa</HelpString>
+        <SmallImage Name="ft-segmentarcos-16.png" />
+        <LargeImage Name="ft-segmentarcos-32.png" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_FT_REMOVENOS">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_FT_RN_N">Remover Nós</Name>
+        <Command>^C^CREMOVENOS</Command>
+        <HelpString xlate="true" UID="XLS_FT_RN_H">Remove os nós (auto-cruzamentos e espinhos) das polilinhas selecionadas: o laço sai e fica um vértice no cruzamento. Equivalente ao RNOS do AgroCAD</HelpString>
+        <SmallImage Name="ft-removenos-16.png" />
+        <LargeImage Name="ft-removenos-32.png" />
+      </Macro>
+    </MenuMacro>
+    <MenuMacro UID="MM_FT_PADRONIZAVERT">
+      <Macro type="Any">
+        <Revision MajorVersion="16" MinorVersion="2" UserVersion="0" />
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <Name xlate="true" UID="XLS_FT_PV_N">Padronizar Vértices</Name>
+        <Command>^C^CPADRONIZAVERT</Command>
+        <HelpString xlate="true" UID="XLS_FT_PV_H">Padroniza o espaçamento entre os vértices ao longo das polilinhas selecionadas, preservando os cantos. Equivalente ao HME do AgroCAD</HelpString>
+        <SmallImage Name="ft-padronizavert-16.png" />
+        <LargeImage Name="ft-padronizavert-32.png" />
+      </Macro>
+    </MenuMacro>
+  </MacroGroup>
+</MenuGroup>
