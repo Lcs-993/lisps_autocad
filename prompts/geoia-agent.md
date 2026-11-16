@@ -62,3 +62,16 @@ A IA deve ser capaz de produzir:
 ## Conclusão
 
 Este prompt-base serve como material de treinamento para a formação de um GeoIA mais preciso, contextualizado e útil para projetos agrícolas. O foco principal é o aprendizado, a referência técnica e a evolução do domínio, e não apenas a criação de um agente isolado.
+
+## Regras de automação CAD com desempenho
+
+Ao propor ou revisar uma ferramenta de geração de linhas (guias, plantio,
+cabeceira):
+
+- preferir solução analítica quando a família de curvas tem forma fechada
+  (retas paralelas, círculos concêntricos);
+- não gerar geometria fora da extensão real do talhão;
+- criar as entidades já com layer e propriedades finais;
+- validar contra um oráculo independente e informar o tempo de execução.
+
+Referência: `training/lessons/licao-01-gofur-crialinhas-desempenho.md`.

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document><name>Fazenda Teste</name>
+ <Folder><name>Infraestrutura</name>
+  <Placemark><name>Sede São José</name><description><![CDATA[<b>Casa</b> principal]]></description>
+   <ExtendedData><Data name="tipo"><value>edificação</value></Data><Data name="area_m2"><value>350.5</value></Data></ExtendedData>
+   <Point><coordinates>-45.19451501,-22.54783801,0</coordinates></Point></Placemark>
+  <Folder><name>Estradas</name>
+   <Placemark><name>Estrada 1</name>
+    <ExtendedData><SchemaData schemaUrl="#s"><SimpleData name="largura">6</SimpleData></SchemaData></ExtendedData>
+    <LineString><coordinates>
+     -45.19451476,-22.54765733,0 -45.19354194,-22.54747782,0 -45.19256962,-22.54765967,0
+    </coordinates></LineString></Placemark>
+  </Folder>
+ </Folder>
+ <Folder><name>Talhões</name>
+  <Placemark><name>Talhão A</name>
+   <Polygon><outerBoundaryIs><LinearRing><coordinates>-45.19451425,-22.54729597,0 -45.19334717,-22.54729738,0 -45.19334591,-22.54639399,0 -45.19451299,-22.54639258,0 -45.19451425,-22.54729597,0</coordinates></LinearRing></outerBoundaryIs>
+   <innerBoundaryIs><LinearRing><coordinates>-45.19412485,-22.54702542,0 -45.19373582,-22.54702589,0 -45.19373532,-22.54666454,0 -45.19412434,-22.54666407,0 -45.19412485,-22.54702542,0</coordinates></LinearRing></innerBoundaryIs></Polygon></Placemark>
+  <Placemark><name>Talhão B (multi)</name><MultiGeometry>
+   <Polygon><outerBoundaryIs><LinearRing><coordinates>-45.19305540,-22.54729773,0 -45.19256912,-22.54729831,0 -45.19256849,-22.54684662,0 -45.19305540,-22.54729773,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+   <Point><coordinates>-45.19281201,-22.54711734,0</coordinates></Point>
+  </MultiGeometry></Placemark>
+ </Folder>
+</Document></kml>
