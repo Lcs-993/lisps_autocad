@@ -1,21 +1,31 @@
 ;;; ==========================================================================
 ;;; CriaLinhas.lsp - Linhas de Sulcação, Plantio e Colheita
 ;;; --------------------------------------------------------------------------
-;;; Recria o fluxo do comando GOFUR ("[NOVO] Criar Linhas") do AgroCAD
-;;; (aba AgroCAD > painel Sistematização):
+;;; Parâmetros do GOFUR ("[NOVO] Criar Linhas") do AgroCAD + execução no
+;;; estilo do CPT (Sulcação): o diálogo SÓ CONFIGURA; a criação é toda pela
+;;; linha de comando, uma curva de referência após a outra.
 ;;;
-;;;   Linhas a serem criadas : Somente Guias / Guias + Plantio / Somente Plantio
-;;;   Linhas Guias           : espaçamento + Modo Manual (clica a posição final)
-;;;   Linhas de Plantio      : quantidade e espaçamento em torno de cada guia
-;;;   Cabeceira              : N passadas Para Dentro / Para Fora do talhão
-;;;   Linhas Internas        : Criar  -> talhões + curva de referência + lado
-;;;                            Selecionar -> cria plantio a partir de guias
-;;;   Predefinições          : Carregar / Salvar / Tornar Padrão
+;;; Configuração (diálogo, CRIALINHASCFG ou opção Configurar):
+;;;   Tipo de Geração : Somente Guidelines / Guidelines + Fileiras / Somente Fileiras
+;;;   Guidelines      : espaçamento + Automático/Manual
+;;;   Fileiras        : quantidade e espaçamento em torno de cada guia
+;;;   Predefinições   : Carregar / Salvar / Definir como Padrão
+;;;
+;;; Execução (CRIALINHAS):
+;;;   Curva de referência [Talhoes/Guias/Espacamento/Configurar] <Sair>; os
+;;;   talhões são pedidos na 1a curva e valem até a opção Talhoes. Ao mover o mouse a barra de status mostra
+;;;   quantas linhas cabem até o cursor (como o CPT).
+;;;     Manual     : clique = posição final; Enter = todo o talhão do lado do cursor
+;;;     Automático : clique = lado;          Enter = os dois lados
+;;;     A          : os dois lados, todo o talhão
+;;;   A bordadura (cabeceira) saiu daqui: vai virar uma ferramenta própria.
+;;;   O diálogo só abre sozinho se não houver configuração (padrão gravado ou
+;;;   OK no diálogo nesta sessão).
 ;;;
 ;;; Layers padrão iguais aos do AgEngine: GUIDELINES (amarelo) e
 ;;; CROPLINES (verde). Talhões = polilinhas fechadas (qualquer layer).
 ;;;
-;;; Comando: CRIALINHAS
+;;; Comandos: CRIALINHAS, CRIALINHASCFG
 ;;; ==========================================================================
 
 (vl-load-com)
@@ -23,6 +33,8 @@
 ;;; --------------------------------------------------------------------------
 ;;; Parâmetros (valores iniciais; o "Tornar Padrão" grava em config\)
 ;;; --------------------------------------------------------------------------
+;;; *CL-PASS* e *CL-RECUAR* não são mais usados (bordadura saiu); ficam na lista
+;;; só para os arquivos .lin já gravados continuarem carregando.
 (setq *CL-VARS* '(*CL-MODO* *CL-ESPG* *CL-MANUAL* *CL-QTD* *CL-ESPP* *CL-PASS*
                   *CL-RECUAR* *CL-AMBOS* *CL-LAYG* *CL-CORG* *CL-LAYP* *CL-CORP*))
 
@@ -32,8 +44,8 @@
         *CL-MANUAL* nil           ; modo manual: usuário clica a posição final
         *CL-QTD*    2             ; linhas de plantio por guia
         *CL-ESPP*   1.5           ; espaçamento entre linhas de plantio (m)
-        *CL-PASS*   4             ; passadas de cabeceira
-        *CL-RECUAR* T             ; 1a passada a meio espaçamento da borda
+        *CL-PASS*   4             ; (sem uso) passadas de cabeceira
+        *CL-RECUAR* T             ; (sem uso) 1a passada a meio espaçamento
         *CL-AMBOS*  T             ; linhas internas dos dois lados da referência
         *CL-LAYG*   "GUIDELINES"
         *CL-CORG*   2
@@ -71,6 +83,11 @@
   )
 )
 
+;;; nome de layer no padrão do FarmTools (só A-Z, 0-9 e "_"; ver TrocaLayer.lsp)
+(defun cl:nome-layer (s)
+  (if tr:nome-padrao (tr:nome-padrao s) (strcase (vl-string-trim " " s)))
+)
+
 (defun cl:carregar-params (arq / f l v)
   (if (and arq (findfile arq) (setq f (open arq "r")))
     (progn
@@ -78,7 +95,11 @@
       (close f)
       (setq v (vl-catch-all-apply 'read (list l)))
       (if (and (listp v) (= (length v) (length *CL-VARS*)))
-        (progn (mapcar 'set *CL-VARS* v) T)
+        (progn
+          (mapcar 'set *CL-VARS* v)
+          ;; predefinições antigas podem ter nomes de layer fora do padrão
+          (setq *CL-LAYG* (cl:nome-layer *CL-LAYG*) *CL-LAYP* (cl:nome-layer *CL-LAYP*))
+          T)
       )
     )
   )
@@ -325,68 +346,64 @@
   res
 )
 
-;;; CABECEIRA: offsets do contorno do talhão
-(defun cl:cabeceira (dentro / talhoes bnd a0 r sinal k d objs guias tot)
-  (if (setq talhoes (cl:sel-talhoes))
-    (progn
-      (cl:layer *CL-LAYG* *CL-CORG*)
-      (setq tot 0)
-      (foreach bnd talhoes
-        (setq a0 (vla-get-Area bnd) sinal 1.0 guias nil)
-        (if (setq r (cl:offset bnd 1.0))
-          (progn
-            (if (> (vla-get-Area (car r)) a0) (setq sinal -1.0))
-            (mapcar 'vla-delete r)))
-        (if (not dentro) (setq sinal (- sinal)))
-        (setq k 1)
-        (repeat *CL-PASS*
-          (setq d (* *CL-ESPG* (if *CL-RECUAR* (- k 0.5) k)))
-          (setq objs (cl:offset bnd (* sinal d)))
-          (if (null objs)
-            (princ (strcat "\nPassada " (itoa k) " não coube no talhão; parando."))
-          )
-          (setq guias (append (cl:poe-layer objs *CL-LAYG*) guias) k (1+ k))
-        )
-        (if (member *CL-MODO* '("GC" "C"))
-          (setq tot (+ tot (length (cl:plantio guias nil nil)))))
-        (if (= *CL-MODO* "C")
-          (mapcar 'vla-delete guias)
-          (setq tot (+ tot (length guias))))
-      )
-      (princ (strcat "\n" (itoa tot) " linha(s) de cabeceira criada(s)."))
+;;; Fase dinâmica, como o CPT do AgroCAD: enquanto o mouse se move, a barra de
+;;; status mostra quantas linhas cabem até o cursor e uma linha de arraste liga a
+;;; curva ao cursor. Devolve (tipo ponto):
+;;;   tipo  = PONTO (clique), ENTER (Enter/espaço/botão direito) ou AMBOS (tecla A)
+;;;   ponto = ponto clicado ou última posição do cursor (nil se o mouse não se mexeu)
+(defun cl:arrasta (ref / o g pt cp d old fim tipo)
+  (setq o (vlax-ename->vla-object ref))
+  (princ (if *CL-MANUAL*
+           "\nPosição final das linhas [Enter = todo o talhão / A = ambos os lados]: "
+           "\nLado das linhas [Enter ou A = ambos os lados]: "))
+  (while (not fim)
+    (setq g (grread T 15 0))
+    (cond
+      ((= (car g) 5)
+       (setq pt (cadr g)
+             cp (vlax-curve-getClosestPointTo o pt T)
+             d  (distance (cl:2d pt) (cl:2d cp)))
+       (if old (grdraw (car old) (cadr old) -1))
+       (grdraw cp pt -1)
+       (setq old (list cp pt))
+       (grtext -1
+         (if *CL-MANUAL*
+           (strcat "CRIALINHAS: " (itoa (1+ (fix (+ (/ d *CL-ESPG*) 1e-6))))
+                   " linha(s) até o cursor (" (rtos d 2 2) " m)")
+           (strcat "CRIALINHAS: distância " (rtos d 2 2) " m"))))
+      ((= (car g) 3) (setq pt (cadr g) tipo 'PONTO fim T))
+      ((or (and (= (car g) 2) (member (cadr g) '(13 32))) (member (car g) '(11 25)))
+       (setq tipo 'ENTER fim T))
+      ((and (= (car g) 2) (member (cadr g) '(65 97))) (setq tipo 'AMBOS fim T))
     )
   )
+  (if old (grdraw (car old) (cadr old) -1))
+  (grtext)
+  (list tipo pt)
 )
 
-;;; LINHAS INTERNAS: offsets da curva de referência recortados pelo talhão
-(defun cl:internas (/ talhoes ent ref tipo ptlado lados limite bnd poly xs ys
+;;; LINHAS INTERNAS: offsets da curva de referência recortados pelos talhões
+;;;   Manual     : clique = posição final; Enter = todo o talhão do lado do cursor
+;;;   Automático : clique = lado (até o fim do talhão); Enter = os dois lados
+(defun cl:internas (talhoes ref / r ptlado lados limite bnd poly xs ys
                       ext refo maxd kmax k s guias novas tot)
-  (if (setq talhoes (cl:sel-talhoes))
-    (progn
-      (while (and (setq ent (entsel "\nSelecione a curva: "))
-                  (not (member (setq tipo (cdr (assoc 0 (entget (car ent)))))
-                               '("LINE" "LWPOLYLINE" "ARC"))))
-        (princ "\nA curva precisa ser LINHA, POLILINHA ou ARCO.")
-      )
-      (if ent
-        (progn
-          (setq ref (car ent))
-          ;; lado / posição final
-          (cond
-            (*CL-MANUAL*
-             (setq ptlado (getpoint "\nIndique a posição final das linhas: "))
-             (if ptlado
-               (setq limite (distance ptlado
-                                      (vlax-curve-getClosestPointTo
-                                        (vlax-ename->vla-object ref) ptlado T))))
-            )
-            (*CL-AMBOS* (setq lados '(1.0 -1.0)))
-            (T
-             (initget "Ambos")
-             (setq ptlado (getpoint "\nIndique o lado do offset [Ambos]: "))
-             (if (= ptlado "Ambos") (setq lados '(1.0 -1.0) ptlado nil))
-            )
-          )
+  (cond
+    ((and (not *CL-MANUAL*) *CL-AMBOS*) (setq lados '(1.0 -1.0)))
+    (T
+     (setq r (cl:arrasta ref))
+     (cond
+       ((= (car r) 'AMBOS) (setq lados '(1.0 -1.0)))
+       ((= (car r) 'PONTO)
+        (setq ptlado (cadr r))
+        (if *CL-MANUAL*
+          (setq limite (distance (cl:2d ptlado)
+                                 (cl:2d (vlax-curve-getClosestPointTo
+                                          (vlax-ename->vla-object ref) ptlado T))))))
+       ((and *CL-MANUAL* (cadr r)) (setq ptlado (cadr r)))
+       (T (setq lados '(1.0 -1.0)))
+     )
+    )
+  )
           (if (or lados ptlado)
             (progn
               (cl:layer *CL-LAYG* *CL-CORG*)
@@ -424,10 +441,6 @@
               (princ (strcat "\n" (itoa tot) " linha(s) criada(s)."))
             )
           )
-        )
-      )
-    )
-  )
 )
 
 ;;; SELECIONAR: cria linhas de plantio a partir de guias existentes
@@ -475,31 +488,27 @@
 (defun cl:preenche ()
   (set_tile "modo"     *CL-MODO*)
   (set_tile "espg"     (rtos *CL-ESPG* 2 4))
-  (set_tile "manual"   (if *CL-MANUAL* "1" "0"))
+  (set_tile "manual"   (if *CL-MANUAL* "man" "auto"))
   (set_tile "qtd"      (itoa *CL-QTD*))
   (set_tile "espp"     (rtos *CL-ESPP* 2 4))
-  (set_tile "passadas" (itoa *CL-PASS*))
   (cl:habilita)
 )
 
 ;;; lê e valida os campos; devolve T se tudo certo
-(defun cl:le-tiles (/ espg qtd espp pass)
+(defun cl:le-tiles (/ espg qtd espp)
   (setq espg (cl:num (get_tile "espg"))
         qtd  (atoi (get_tile "qtd"))
-        espp (cl:num (get_tile "espp"))
-        pass (atoi (get_tile "passadas")))
+        espp (cl:num (get_tile "espp")))
   (cond
     ((not (and espg (> espg 0))) (set_tile "status" "Espaçamento das guias inválido.") nil)
     ((< qtd 1)                   (set_tile "status" "Quantidade de linhas de plantio inválida.") nil)
     ((not (and espp (> espp 0))) (set_tile "status" "Espaçamento do plantio inválido.") nil)
-    ((< pass 1)                  (set_tile "status" "Número de passadas inválido.") nil)
     (T
      (setq *CL-MODO*   (get_tile "modo")
            *CL-ESPG*   espg
-           *CL-MANUAL* (= (get_tile "manual") "1")
+           *CL-MANUAL* (= (get_tile "manual") "man")
            *CL-QTD*    qtd
-           *CL-ESPP*   espp
-           *CL-PASS*   pass)
+           *CL-ESPP*   espp)
      (set_tile "status" "")
      T)
   )
@@ -512,16 +521,14 @@
       (set_tile "corg"   (itoa *CL-CORG*))
       (set_tile "layp"   *CL-LAYP*)
       (set_tile "corp"   (itoa *CL-CORP*))
-      (set_tile "recuar" (if *CL-RECUAR* "1" "0"))
       (set_tile "ambos"  (if *CL-AMBOS* "1" "0"))
       (action_tile "accept"
         (strcat
           "(setq corg (atoi (get_tile \"corg\")) corp (atoi (get_tile \"corp\")))"
-          "(if (and (snvalid (get_tile \"layg\")) (snvalid (get_tile \"layp\"))"
+          "(if (and (/= \"\" (cl:nome-layer (get_tile \"layg\"))) (/= \"\" (cl:nome-layer (get_tile \"layp\")))"
           "         (< 0 corg 256) (< 0 corp 256))"
-          "  (progn (setq *CL-LAYG* (get_tile \"layg\") *CL-CORG* corg"
-          "               *CL-LAYP* (get_tile \"layp\") *CL-CORP* corp"
-          "               *CL-RECUAR* (= (get_tile \"recuar\") \"1\")"
+          "  (progn (setq *CL-LAYG* (cl:nome-layer (get_tile \"layg\")) *CL-CORG* corg"
+          "               *CL-LAYP* (cl:nome-layer (get_tile \"layp\")) *CL-CORP* corp"
           "               *CL-AMBOS*  (= (get_tile \"ambos\") \"1\"))"
           "         (done_dialog 1))"
           "  (alert \"Nome de layer ou cor (1-255) inválido.\"))"))
@@ -530,66 +537,138 @@
   )
 )
 
-(defun c:CRIALINHAS (/ *error* doc dcl arqdcl r loop arq)
+;;; --------------------------------------------------------------------------
+;;; Configuração (diálogo) - só ajusta os parâmetros, não executa nada.
+;;; OK grava os parâmetros na sessão; Cancelar desfaz o que mudou.
+;;; --------------------------------------------------------------------------
+(defun cl:init ()
+  (if (not *CL-INIT*)
+    (progn (cl:carregar-params (cl:arq-padrao)) (setq *CL-INIT* T)))
+)
+
+;;; já configurado? (OK no diálogo nesta sessão do AutoCAD ou padrão gravado)
+(defun cl:configurado-p ()
+  (or (vl-bb-ref '*CL-CONFIG-OK*) (findfile (cl:arq-padrao)))
+)
+
+(defun cl:configurar (/ dcl arqdcl r loop arq ok bak)
+  (setq arqdcl (if (cl:pasta-lisps) (strcat (cl:pasta-lisps) "\\CriaLinhas.dcl"))
+        bak    (mapcar 'eval *CL-VARS*)
+        loop   T)
+  (if (not (and arqdcl (findfile arqdcl)))
+    (progn (alert "Arquivo CriaLinhas.dcl não encontrado.") (setq loop nil)))
+  (while loop
+    (setq dcl (load_dialog arqdcl))
+    (if (not (new_dialog "crialinhas" dcl))
+      (progn (unload_dialog dcl) (alert "Erro ao abrir o diálogo.") (setq loop nil r 0))
+      (progn
+        (cl:preenche)
+        (action_tile "modo"     "(setq *CL-MODO* $value) (cl:habilita)")
+        (action_tile "qtd"      "(setq *CL-QTD* (max 1 (atoi $value))) (cl:habilita)")
+        (action_tile "avancado" "(if (cl:le-tiles) (done_dialog 6))")
+        (action_tile "carregar" "(done_dialog 7)")
+        (action_tile "salvar"   "(if (cl:le-tiles) (done_dialog 8))")
+        (action_tile "padrao"
+          "(if (cl:le-tiles) (set_tile \"status\" (if (cl:salvar-params (cl:arq-padrao)) \"Parâmetros gravados como padrão.\" \"Não foi possível gravar o padrão.\")))")
+        (action_tile "accept"   "(if (cl:le-tiles) (done_dialog 1))")
+        (action_tile "cancel"   "(done_dialog 0)")
+        (setq r (start_dialog))
+        (if (= r 6) (cl:dlg-avancado dcl))
+        (unload_dialog dcl)
+        (cond
+          ((= r 1) (setq ok T loop nil) (vl-bb-set '*CL-CONFIG-OK* T))
+          ((= r 7)
+           (if (setq arq (getfiled "Carregar predefinição" (strcat (cl:pasta-config) "\\") "lin" 0))
+             (if (cl:carregar-params arq)
+               (princ (strcat "\nPredefinição carregada: " arq))
+               (alert "Arquivo de predefinição inválido."))))
+          ((= r 8)
+           (if (setq arq (getfiled "Salvar predefinição" (strcat (cl:pasta-config) "\\") "lin" 1))
+             (if (cl:salvar-params arq) (princ (strcat "\nPredefinição salva: " arq)))))
+          ((= r 6))                                 ; volta ao diálogo
+          (T (setq loop nil))
+        )
+      )
+    )
+  )
+  (if (not ok) (mapcar 'set *CL-VARS* bak))          ; Cancelar: desfaz
+  ok
+)
+
+;;; resumo da configuração atual na linha de comando
+(defun cl:resumo ()
+  (princ (strcat "\nConfiguração: "
+                 (cdr (assoc *CL-MODO* '(("G" . "Somente Guidelines")
+                                         ("GC" . "Guidelines + Fileiras")
+                                         ("C" . "Somente Fileiras"))))
+                 " | Guias " (rtos *CL-ESPG* 2 2) " m"
+                 (if (= *CL-MODO* "G") ""
+                   (strcat " | " (itoa *CL-QTD*) " fileira(s) a " (rtos *CL-ESPP* 2 2) " m"))
+                 " | " (if *CL-MANUAL* "Manual" "Automático")
+                 "\n(opção C = Configurar)"))
+)
+
+;;; talhões ainda válidos (não apagados)
+(defun cl:vivos (lst) (vl-remove-if 'vlax-erased-p lst))
+
+;;; --------------------------------------------------------------------------
+;;; Comando CRIALINHAS - execução direta pela linha de comando (estilo CPT):
+;;; seleciona os talhões uma vez e depois uma curva de referência por vez.
+;;; O diálogo só abre na primeira vez (sem configuração) ou pela opção Configurar.
+;;; Cada curva/ação é um passo de desfazer (U desfaz a última).
+;;; --------------------------------------------------------------------------
+(defun c:CRIALINHAS (/ *error* doc talhoes op tipo fim marca)
   (setq doc (vla-get-ActiveDocument (vlax-get-acad-object)))
   (defun *error* (msg)
-    (if dcl (unload_dialog dcl))
-    (vla-EndUndoMark doc)
+    (grtext) (redraw)
+    (if marca (vla-EndUndoMark doc))
     (if (not (wcmatch (strcase msg) "*CANCEL*,*QUIT*,*BREAK*"))
       (princ (strcat "\nErro: " msg)))
     (princ)
   )
-  (setq arqdcl (if (cl:pasta-lisps) (strcat (cl:pasta-lisps) "\\CriaLinhas.dcl")))
-  (if (not (and arqdcl (findfile arqdcl)))
-    (progn (alert "Arquivo CriaLinhas.dcl não encontrado.") (exit)))
-  (if (not *CL-INIT*)
-    (progn (cl:carregar-params (cl:arq-padrao)) (setq *CL-INIT* T)))
-
-  (setq loop T)
-  (while loop
-    (setq dcl (load_dialog arqdcl))
-    (if (not (new_dialog "crialinhas" dcl))
-      (progn (alert "Erro ao abrir o diálogo.") (exit)))
-    (cl:preenche)
-    (action_tile "modo"     "(setq *CL-MODO* $value) (cl:habilita)")
-    (action_tile "qtd"      "(setq *CL-QTD* (max 1 (atoi $value))) (cl:habilita)")
-    (action_tile "dentro"   "(if (cl:le-tiles) (done_dialog 2))")
-    (action_tile "fora"     "(if (cl:le-tiles) (done_dialog 3))")
-    (action_tile "criar"    "(if (cl:le-tiles) (done_dialog 4))")
-    (action_tile "selecionar" "(if (cl:le-tiles) (done_dialog 5))")
-    (action_tile "avancado" "(if (cl:le-tiles) (done_dialog 6))")
-    (action_tile "carregar" "(done_dialog 7)")
-    (action_tile "salvar"   "(if (cl:le-tiles) (done_dialog 8))")
-    (action_tile "padrao"
-      "(if (cl:le-tiles) (set_tile \"status\" (if (cl:salvar-params (cl:arq-padrao)) \"Parâmetros gravados como padrão.\" \"Não foi possível gravar o padrão.\")))")
-    (action_tile "cancel"   "(done_dialog 0)")
-    (setq r (start_dialog))
-    (if (= r 6) (cl:dlg-avancado dcl))
-    (unload_dialog dcl)
-    (setq dcl nil)
+  (cl:init)
+  (if (and (not (cl:configurado-p)) (not (cl:configurar)))
+    (exit))
+  (cl:resumo)
+  (while (not fim)
+    (setvar "ERRNO" 0)
+    (initget "Talhoes Guias Espacamento Configurar")
+    (setq op (entsel (strcat "\nCurva de referência [Talhoes/Guias/Espacamento/Configurar] <Sair>: ")))
+    (setq talhoes (cl:vivos talhoes))
     (cond
-      ((member r '(2 3 4 5))
-       (vla-StartUndoMark doc)
-       (cond ((= r 2) (cl:cabeceira T))
-             ((= r 3) (cl:cabeceira nil))
-             ((= r 4) (cl:internas))
-             ((= r 5) (cl:selecionar)))
-       (vla-EndUndoMark doc)
-      )
-      ((= r 7)
-       (if (setq arq (getfiled "Carregar predefinição" (strcat (cl:pasta-config) "\\") "lin" 0))
-         (if (cl:carregar-params arq)
-           (princ (strcat "\nPredefinição carregada: " arq))
-           (alert "Arquivo de predefinição inválido."))))
-      ((= r 8)
-       (if (setq arq (getfiled "Salvar predefinição" (strcat (cl:pasta-config) "\\") "lin" 1))
-         (if (cl:salvar-params arq) (princ (strcat "\nPredefinição salva: " arq)))))
-      ((= r 6))                                   ; volta ao diálogo
-      (T (setq loop nil))
+      ((and (null op) (= (getvar "ERRNO") 7)) (princ "\nNada selecionado."))
+      ((null op) (setq fim T))
+      ((= op "Talhoes") (setq talhoes (cl:sel-talhoes)))
+      ((= op "Espacamento")
+       (initget 6)
+       (if (setq tipo (getdist (strcat "\nEspaçamento das guias <" (rtos *CL-ESPG* 2 2) ">: ")))
+         (setq *CL-ESPG* tipo)))
+      ((= op "Configurar") (if (cl:configurar) (cl:resumo)))
+      ((= op "Guias")
+       (vla-StartUndoMark doc) (setq marca T)
+       (cl:selecionar)
+       (vla-EndUndoMark doc) (setq marca nil))
+      ((not (member (cdr (assoc 0 (entget (car op)))) '("LINE" "LWPOLYLINE" "ARC")))
+       (princ "\nA curva precisa ser LINHA, POLILINHA ou ARCO."))
+      (T
+       (if (null talhoes) (setq talhoes (cl:sel-talhoes)))
+       (if talhoes
+         (progn
+           (vla-StartUndoMark doc) (setq marca T)
+           (cl:internas talhoes (car op))
+           (vla-EndUndoMark doc) (setq marca nil))
+         (princ "\nNenhum talhão selecionado.")))
     )
   )
   (princ)
 )
 
-(princ "\nCriaLinhas carregado. Comando: CRIALINHAS")
+;;; abre só a configuração
+(defun c:CRIALINHASCFG ()
+  (cl:init)
+  (if (cl:configurar) (cl:resumo))
+  (princ)
+)
+
+(princ "\nCriaLinhas carregado. Comandos: CRIALINHAS, CRIALINHASCFG (configurar)")
 (princ)

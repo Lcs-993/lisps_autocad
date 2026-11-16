@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+Warning! Do not edit the contents of this file.
+If you attempt to edit this file using an XML editor, you could lose
+customization and migration functionality. If you need to change
+information in the customization file, use the Customize User Interface
+dialog in the product.
+To access the Customize User Interface dialog, click the Tools menu,
+Customization panel, User Interface button, or enter CUI on the command line.
+-->
+<RibbonRoot>
+  <RibbonPanelSourceCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <RibbonPanelSource UID="RBN_LISPS_PNL_AJUSTES" Text="Ajustes" HiddenInEditor="false">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <Name xlate="true" UID="XLS_LISPS_PNL_AJUSTES">Ajustes</Name>
+      <RibbonRow UID="RBN_LISPS_ROW_AJUSTES">
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <RibbonCommandButton UID="RBN_LISPS_BTN_SC" Id="AcRibbonCommandButton" Text="Coordenadas e Unidades" ButtonStyle="LargeWithText" MenuMacroID="MM_LISPS_SISCOORD" KeyTip="">
+          <TooltipTitle xlate="true" UID="XLS_LISPS_TT_SC">Sistema de Coordenadas do Projeto e Unidades</TooltipTitle>
+          <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        </RibbonCommandButton>
+        <RibbonSplitButton UID="RBN_LISPS_SPLIT_TR" Id="AcRibbonSplitButton" Text="Troca Rápida de Layer" SmallImage="RCDATA_16_LAYCUR" LargeImage="RCDATA_32_LAYCUR" Behavior="DropDownNoFollow" ListStyle="Descriptive" ButtonStyle="LargeWithText" Grouping="false">
+          <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          <RibbonCommandButton UID="RBN_LISPS_BTN_TRLE" Id="AcRibbonCommandButton" Text="Transformar em Limite Externo" ButtonStyle="SmallWithText" MenuMacroID="MM_LISPS_TRLE" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_LISPS_TT_TRLE">Transformar em Limite Externo</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_LISPS_BTN_TRLI" Id="AcRibbonCommandButton" Text="Transformar em Limite Interno" ButtonStyle="SmallWithText" MenuMacroID="MM_LISPS_TRLI" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_LISPS_TT_TRLI">Transformar em Limite Interno</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_LISPS_BTN_TRSU" Id="AcRibbonCommandButton" Text="Transformar em Sulcação" ButtonStyle="SmallWithText" MenuMacroID="MM_LISPS_TRSU" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_LISPS_TT_TRSU">Transformar em Sulcação</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_LISPS_BTN_TRTA" Id="AcRibbonCommandButton" Text="Transformar em Talhão" ButtonStyle="SmallWithText" MenuMacroID="MM_LISPS_TRTA" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_LISPS_TT_TRTA">Transformar em Talhão</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_LISPS_BTN_TRTE" Id="AcRibbonCommandButton" Text="Transformar em Terraço" ButtonStyle="SmallWithText" MenuMacroID="MM_LISPS_TRTE" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_LISPS_TT_TRTE">Transformar em Terraço</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_LISPS_BTN_TRCO" Id="AcRibbonCommandButton" Text="Transformar em Colheita" ButtonStyle="SmallWithText" MenuMacroID="MM_LISPS_TRCO" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_LISPS_TT_TRCO">Transformar em Colheita</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+        </RibbonSplitButton>
+        <RibbonSplitButton UID="RBN_LISPS_SPLIT_LIM" Id="AcRibbonSplitButton" Text="Limites do Talhão" SmallImage="RCDATA_16_TRIM" LargeImage="RCDATA_32_TRIM" Behavior="SplitFollowStaticText" ListStyle="Descriptive" ButtonStyle="LargeWithText" Grouping="false">
+          <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          <RibbonCommandButton UID="RBN_LISPS_BTN_CORTALIM" Id="AcRibbonCommandButton" Text="Cortar linhas pelo limite" ButtonStyle="SmallWithText" MenuMacroID="MM_LISPS_CORTALIM" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_LISPS_TT_CORTALIM">Cortar linhas pelo limite do talhão</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_LISPS_BTN_ESTENDELIM" Id="AcRibbonCommandButton" Text="Estender linhas até o limite" ButtonStyle="SmallWithText" MenuMacroID="MM_LISPS_ESTENDELIM" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_LISPS_TT_ESTENDELIM">Estender linhas até o limite do talhão</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_LISPS_BTN_AJUSTALIM" Id="AcRibbonCommandButton" Text="Estender e cortar até o limite" ButtonStyle="SmallWithText" MenuMacroID="MM_LISPS_AJUSTALIM" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_LISPS_TT_AJUSTALIM">Estender e cortar linhas até o limite do talhão</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_LISPS_BTN_APAGALIM" Id="AcRibbonCommandButton" Text="Apagar dentro/fora de limite" ButtonStyle="SmallWithText" MenuMacroID="MM_LISPS_APAGALIM" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_LISPS_TT_APAGALIM">Apagar objetos dentro ou fora de limite</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+        </RibbonSplitButton>
+        <RibbonSplitButton UID="RBN_LISPS_SPLIT_GEOM" Id="AcRibbonSplitButton" Text="Geometria" SmallImage="RCDATA_16_PEDIT" LargeImage="RCDATA_32_PEDIT" Behavior="SplitFollowStaticText" ListStyle="Descriptive" ButtonStyle="LargeWithText" Grouping="false">
+          <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          <RibbonCommandButton UID="RBN_LISPS_BTN_SMP" Id="AcRibbonCommandButton" Text="Simplificar Polilinhas" ButtonStyle="SmallWithText" MenuMacroID="MM_LISPS_SIMPLIFICAPL" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_LISPS_TT_SMP">Reduzir vértices sem perda de qualidade</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_LISPS_BTN_SEGA" Id="AcRibbonCommandButton" Text="Segmentar Arcos" ButtonStyle="SmallWithText" MenuMacroID="MM_LISPS_SEGMENTARCOS" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_LISPS_TT_SEGA">Converter arcos de polilinhas em segmentos de reta</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+        </RibbonSplitButton>
+      </RibbonRow>
+    </RibbonPanelSource>
+    <RibbonPanelSource UID="RBN_LISPS_PNL_SIST" Text="Sistematização" HiddenInEditor="false">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <Name xlate="true" UID="XLS_LISPS_PNL_SIST">Sistematização</Name>
+      <RibbonRow UID="RBN_LISPS_ROW_SIST">
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <RibbonCommandButton UID="RBN_LISPS_BTN_CL" Id="AcRibbonCommandButton" Text="Criar Linhas" ButtonStyle="LargeWithText" MenuMacroID="MM_LISPS_CRIALINHAS" KeyTip="">
+          <TooltipTitle xlate="true" UID="XLS_LISPS_TT_CL">Criar Linhas</TooltipTitle>
+          <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        </RibbonCommandButton>
+        <RibbonCommandButton UID="RBN_LISPS_BTN_CN" Id="AcRibbonCommandButton" Text="Conectar Linhas" ButtonStyle="LargeWithText" MenuMacroID="MM_LISPS_CONECTALINHAS" KeyTip="">
+          <TooltipTitle xlate="true" UID="XLS_LISPS_TT_CN">Conectar Linhas entre Talhões</TooltipTitle>
+          <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        </RibbonCommandButton>
+        <RibbonCommandButton UID="RBN_LISPS_BTN_CR" Id="AcRibbonCommandButton" Text="Carreadores" ButtonStyle="LargeWithText" MenuMacroID="MM_LISPS_CARREADORES" KeyTip="">
+          <TooltipTitle xlate="true" UID="XLS_LISPS_TT_CR">Criar Carreadores / Juntar Talhões</TooltipTitle>
+          <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        </RibbonCommandButton>
+        <RibbonCommandButton UID="RBN_LISPS_BTN_OB" Id="AcRibbonCommandButton" Text="Desviar Obstáculos" ButtonStyle="LargeWithText" MenuMacroID="MM_LISPS_DESVIAOBS" KeyTip="">
+          <TooltipTitle xlate="true" UID="XLS_LISPS_TT_OB">Desviar Linhas de Obstáculos</TooltipTitle>
+          <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        </RibbonCommandButton>
+        <RibbonCommandButton UID="RBN_LISPS_BTN_MN" Id="AcRibbonCommandButton" Text="Manobras" ButtonStyle="LargeWithText" MenuMacroID="MM_LISPS_MANOBRAS" KeyTip="">
+          <TooltipTitle xlate="true" UID="XLS_LISPS_TT_MN">Criar Manobras entre Linhas</TooltipTitle>
+          <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        </RibbonCommandButton>
+        <RibbonCommandButton UID="RBN_LISPS_BTN_SCC" Id="AcRibbonCommandButton" Text="Concordar Eixos" ButtonStyle="LargeWithText" MenuMacroID="MM_LISPS_SIS_CONCORDAR" KeyTip="">
+          <TooltipTitle xlate="true" UID="XLS_LISPS_TT_SCC">Concordar Eixos de Estradas (cruzamentos e praças)</TooltipTitle>
+          <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        </RibbonCommandButton>
+        <RibbonSplitButton UID="RBN_LISPS_SPLIT_RA" Id="AcRibbonSplitButton" Text="Rede de Rotas" SmallImage="RCDATA_16_JOIN" LargeImage="RCDATA_32_JOIN" Behavior="SplitFollowStaticText" ListStyle="Descriptive" ButtonStyle="LargeWithText" Grouping="false">
+          <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          <RibbonCommandButton UID="RBN_LISPS_BTN_RAV" Id="AcRibbonCommandButton" Text="Validar Rede (REDE_VALIDAR)" ButtonStyle="SmallWithText" MenuMacroID="MM_LISPS_RA_VALIDAR" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_LISPS_TT_RAV">Validar a geometria da rede de rotas</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_LISPS_BTN_RAC" Id="AcRibbonCommandButton" Text="Corrigir Rede" ButtonStyle="SmallWithText" MenuMacroID="MM_LISPS_RA_CORRIGIR" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_LISPS_TT_RAC">Corrigir a topologia da rede (simulação / UNDO)</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_LISPS_BTN_RAP" Id="AcRibbonCommandButton" Text="Próximo Erro" ButtonStyle="SmallWithText" MenuMacroID="MM_LISPS_RA_PROXIMO" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_LISPS_TT_RAP">Ir até o próximo erro marcado</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_LISPS_BTN_RAE" Id="AcRibbonCommandButton" Text="Exportar GeoJSON" ButtonStyle="SmallWithText" MenuMacroID="MM_LISPS_RA_EXPORTAR" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_LISPS_TT_RAE">Exportar a rede para o Routes Analyzer</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+        </RibbonSplitButton>
+        <RibbonSplitButton UID="RBN_LISPS_SPLIT_RAREDE" Id="AcRibbonSplitButton" Text="Rede (RA_REDE)" SmallImage="RCDATA_16_BREAK" LargeImage="RCDATA_32_BREAK" Behavior="DropDownNoFollow" ListStyle="Descriptive" ButtonStyle="LargeWithText" Grouping="false">
+          <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          <RibbonCommandButton UID="RBN_LISPS_BTN_ALT_REDECARREGARA" Id="AcRibbonCommandButton" Text="Carregar versão RA_REDE" ButtonStyle="SmallWithText" MenuMacroID="MM_LISPS_ALT_REDECARREGARA" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_LISPS_TT_ALT_REDECARREGARA">Carregar versão RA_REDE (REDE_CARREGA_RA)</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_LISPS_BTN_ALT_RAVERIFICAR" Id="AcRibbonCommandButton" Text="Verificar" ButtonStyle="SmallWithText" MenuMacroID="MM_LISPS_ALT_RAVERIFICAR" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_LISPS_TT_ALT_RAVERIFICAR">RA_REDE: Verificar (RA_VERIFICAR)</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_LISPS_BTN_ALT_RACORRIGIR" Id="AcRibbonCommandButton" Text="Corrigir Tudo" ButtonStyle="SmallWithText" MenuMacroID="MM_LISPS_ALT_RACORRIGIR" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_LISPS_TT_ALT_RACORRIGIR">RA_REDE: Corrigir Tudo (RA_CORRIGIR)</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_LISPS_BTN_ALT_RAQUEBRAR" Id="AcRibbonCommandButton" Text="Quebrar nos Entroncamentos" ButtonStyle="SmallWithText" MenuMacroID="MM_LISPS_ALT_RAQUEBRAR" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_LISPS_TT_ALT_RAQUEBRAR">RA_REDE: Quebrar nos Entroncamentos (RA_QUEBRAR)</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_LISPS_BTN_ALT_RAPONTAS" Id="AcRibbonCommandButton" Text="Ligar Pontas Soltas" ButtonStyle="SmallWithText" MenuMacroID="MM_LISPS_ALT_RAPONTAS" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_LISPS_TT_ALT_RAPONTAS">RA_REDE: Ligar Pontas Soltas (RA_PONTAS)</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_LISPS_BTN_ALT_RAJUNTAR" Id="AcRibbonCommandButton" Text="Emendar Pseudo-nós" ButtonStyle="SmallWithText" MenuMacroID="MM_LISPS_ALT_RAJUNTAR" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_LISPS_TT_ALT_RAJUNTAR">RA_REDE: Emendar Pseudo-nós (RA_JUNTAR)</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_LISPS_BTN_ALT_RASEGMENTAR" Id="AcRibbonCommandButton" Text="Segmentar Arcos" ButtonStyle="SmallWithText" MenuMacroID="MM_LISPS_ALT_RASEGMENTAR" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_LISPS_TT_ALT_RASEGMENTAR">RA_REDE: Segmentar Arcos (RA_SEGMENTAR)</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_LISPS_BTN_ALT_RASEMCONEXAO" Id="AcRibbonCommandButton" Text="Marcar Sem Conexão (viaduto)" ButtonStyle="SmallWithText" MenuMacroID="MM_LISPS_ALT_RASEMCONEXAO" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_LISPS_TT_ALT_RASEMCONEXAO">RA_REDE: Marcar Sem Conexão (viaduto) (RA_SEMCONEXAO)</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_LISPS_BTN_ALT_RAPROXIMO" Id="AcRibbonCommandButton" Text="Próximo Marcador" ButtonStyle="SmallWithText" MenuMacroID="MM_LISPS_ALT_RAPROXIMO" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_LISPS_TT_ALT_RAPROXIMO">RA_REDE: Próximo Marcador (RA_PROXIMO)</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_LISPS_BTN_ALT_RALIMPAR" Id="AcRibbonCommandButton" Text="Limpar Marcadores" ButtonStyle="SmallWithText" MenuMacroID="MM_LISPS_ALT_RALIMPAR" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_LISPS_TT_ALT_RALIMPAR">RA_REDE: Limpar Marcadores (RA_LIMPAR)</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_LISPS_BTN_ALT_RADESENHAR" Id="AcRibbonCommandButton" Text="Desenhar Linha da Rede" ButtonStyle="SmallWithText" MenuMacroID="MM_LISPS_ALT_RADESENHAR" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_LISPS_TT_ALT_RADESENHAR">RA_REDE: Desenhar Linha da Rede (RA_DESENHAR)</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_LISPS_BTN_ALT_RACONFIG" Id="AcRibbonCommandButton" Text="Configurar" ButtonStyle="SmallWithText" MenuMacroID="MM_LISPS_ALT_RACONFIG" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_LISPS_TT_ALT_RACONFIG">RA_REDE: Configurar (RA_CONFIG)</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_LISPS_BTN_ALT_RAAJUDA" Id="AcRibbonCommandButton" Text="Ajuda" ButtonStyle="SmallWithText" MenuMacroID="MM_LISPS_ALT_RAAJUDA" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_LISPS_TT_ALT_RAAJUDA">RA_REDE: Ajuda (RA_AJUDA)</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+        </RibbonSplitButton>
+      </RibbonRow>
+    </RibbonPanelSource>
+    <RibbonPanelSource UID="RBN_LISPS_PNL_IMP" Text="Importação / Exportação" HiddenInEditor="false">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <Name xlate="true" UID="XLS_LISPS_PNL_IMP">Importação / Exportação</Name>
+      <RibbonRow UID="RBN_LISPS_ROW_IMP">
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <RibbonCommandButton UID="RBN_LISPS_BTN_GEOIMPORTAR" Id="AcRibbonCommandButton" Text="Importação Avançada" ButtonStyle="LargeWithText" MenuMacroID="MM_LISPS_GEOIMPORTAR" KeyTip="">
+          <TooltipTitle xlate="true" UID="XLS_LISPS_TT_GEOIMPORTAR">Importação Avançada (GEOIMPORTAR)</TooltipTitle>
+          <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        </RibbonCommandButton>
+        <RibbonCommandButton UID="RBN_LISPS_BTN_GEOEXPORTAR" Id="AcRibbonCommandButton" Text="Exportação Avançada" ButtonStyle="LargeWithText" MenuMacroID="MM_LISPS_GEOEXPORTAR" KeyTip="">
+          <TooltipTitle xlate="true" UID="XLS_LISPS_TT_GEOEXPORTAR">Exportação Avançada (GEOEXPORTAR)</TooltipTitle>
+          <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        </RibbonCommandButton>
+        <RibbonCommandButton UID="RBN_LISPS_BTN_IMPKML" Id="AcRibbonCommandButton" Text="KML / KMZ" ButtonStyle="LargeWithText" MenuMacroID="MM_LISPS_IMPKML" KeyTip="">
+          <TooltipTitle xlate="true" UID="XLS_LISPS_TT_IMPKML">Importar KML / KMZ (IMPKML)</TooltipTitle>
+          <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        </RibbonCommandButton>
+        <RibbonCommandButton UID="RBN_LISPS_BTN_IMPGEOJSON" Id="AcRibbonCommandButton" Text="GeoJSON" ButtonStyle="LargeWithText" MenuMacroID="MM_LISPS_IMPGEOJSON" KeyTip="">
+          <TooltipTitle xlate="true" UID="XLS_LISPS_TT_IMPGEOJSON">Importar GeoJSON (IMPGEOJSON)</TooltipTitle>
+          <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        </RibbonCommandButton>
+        <RibbonCommandButton UID="RBN_LISPS_BTN_IMPSHP" Id="AcRibbonCommandButton" Text="Shapefile" ButtonStyle="LargeWithText" MenuMacroID="MM_LISPS_IMPSHP" KeyTip="">
+          <TooltipTitle xlate="true" UID="XLS_LISPS_TT_IMPSHP">Importar Shapefile (IMPSHP)</TooltipTitle>
+          <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        </RibbonCommandButton>
+      </RibbonRow>
+    </RibbonPanelSource>
+    <RibbonPanelSource UID="RBN_LISPS_PNL_CLA" Text="Classificação" HiddenInEditor="false">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <Name xlate="true" UID="XLS_LISPS_PNL_CLA">Classificação</Name>
+      <RibbonRow UID="RBN_LISPS_ROW_CLA">
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        <RibbonCommandButton UID="RBN_LISPS_BTN_CLAGERENCIAR" Id="AcRibbonCommandButton" Text="Classificação Avançada" ButtonStyle="LargeWithText" MenuMacroID="MM_LISPS_CLAGERENCIAR" KeyTip="">
+          <TooltipTitle xlate="true" UID="XLS_LISPS_TT_CLAGERENCIAR">Classificação Avançada (CLA_GERENCIAR)</TooltipTitle>
+          <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        </RibbonCommandButton>
+        <RibbonSplitButton UID="RBN_LISPS_SPLIT_CFT" Id="AcRibbonSplitButton" Text="Cliente / Fazenda / Talhão" SmallImage="RCDATA_16_LAYCUR" LargeImage="RCDATA_32_LAYCUR" Behavior="DropDownNoFollow" ListStyle="Descriptive" ButtonStyle="LargeWithText" Grouping="false">
+          <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          <RibbonCommandButton UID="RBN_LISPS_BTN_CLACFT" Id="AcRibbonCommandButton" Text="Definir Cliente, Fazenda e Talhão" ButtonStyle="SmallWithText" MenuMacroID="MM_LISPS_CLACFT" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_LISPS_TT_CLACFT">Definir Cliente, Fazenda e Talhão (CLA_CFT)</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_LISPS_BTN_CLAAUTO" Id="AcRibbonCommandButton" Text="CFT Automático" ButtonStyle="SmallWithText" MenuMacroID="MM_LISPS_CLAAUTO" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_LISPS_TT_CLAAUTO">CFT Automático (CLA_AUTO)</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_LISPS_BTN_CLACOPIAR" Id="AcRibbonCommandButton" Text="Copiar CFT" ButtonStyle="SmallWithText" MenuMacroID="MM_LISPS_CLACOPIAR" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_LISPS_TT_CLACOPIAR">Copiar CFT (CLA_COPIAR)</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_LISPS_BTN_CLAREMOVER" Id="AcRibbonCommandButton" Text="Remover CFT / Classificação" ButtonStyle="SmallWithText" MenuMacroID="MM_LISPS_CLAREMOVER" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_LISPS_TT_CLAREMOVER">Remover CFT / Classificação (CLA_REMOVER)</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_LISPS_BTN_CLAFILTRO" Id="AcRibbonCommandButton" Text="Filtrar Talhões por CFT" ButtonStyle="SmallWithText" MenuMacroID="MM_LISPS_CLAFILTRO" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_LISPS_TT_CLAFILTRO">Filtrar Talhões por CFT (CLA_FILTRO)</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_LISPS_BTN_CLALEGENDA" Id="AcRibbonCommandButton" Text="Legenda de CFT" ButtonStyle="SmallWithText" MenuMacroID="MM_LISPS_CLALEGENDA" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_LISPS_TT_CLALEGENDA">Legenda de CFT (CLA_LEGENDA)</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+        </RibbonSplitButton>
+        <RibbonSplitButton UID="RBN_LISPS_SPLIT_TIPOS" Id="AcRibbonSplitButton" Text="Tipos de Objeto" SmallImage="RCDATA_16_TRIM" LargeImage="RCDATA_32_TRIM" Behavior="DropDownNoFollow" ListStyle="Descriptive" ButtonStyle="LargeWithText" Grouping="false">
+          <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          <RibbonCommandButton UID="RBN_LISPS_BTN_CLALIMEXT" Id="AcRibbonCommandButton" Text="Limite Externo" ButtonStyle="SmallWithText" MenuMacroID="MM_LISPS_CLALIMEXT" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_LISPS_TT_CLALIMEXT">Limite Externo (CLA_LIMEXT)</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_LISPS_BTN_CLALIMINT" Id="AcRibbonCommandButton" Text="Limites Internos" ButtonStyle="SmallWithText" MenuMacroID="MM_LISPS_CLALIMINT" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_LISPS_TT_CLALIMINT">Limites Internos (CLA_LIMINT)</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_LISPS_BTN_CLACABEXT" Id="AcRibbonCommandButton" Text="Cabeceira Externa" ButtonStyle="SmallWithText" MenuMacroID="MM_LISPS_CLACABEXT" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_LISPS_TT_CLACABEXT">Cabeceira Externa (CLA_CABEXT)</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_LISPS_BTN_CLACABINT" Id="AcRibbonCommandButton" Text="Cabeceiras Internas" ButtonStyle="SmallWithText" MenuMacroID="MM_LISPS_CLACABINT" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_LISPS_TT_CLACABINT">Cabeceiras Internas (CLA_CABINT)</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_LISPS_BTN_CLACURVAAB" Id="AcRibbonCommandButton" Text="Curvas AB" ButtonStyle="SmallWithText" MenuMacroID="MM_LISPS_CLACURVAAB" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_LISPS_TT_CLACURVAAB">Curvas AB (CLA_CURVAAB)</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_LISPS_BTN_CLALINHAAB" Id="AcRibbonCommandButton" Text="Linhas AB" ButtonStyle="SmallWithText" MenuMacroID="MM_LISPS_CLALINHAAB" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_LISPS_TT_CLALINHAAB">Linhas AB (CLA_LINHAAB)</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_LISPS_BTN_CLAADAPT" Id="AcRibbonCommandButton" Text="Curvas Adaptáveis" ButtonStyle="SmallWithText" MenuMacroID="MM_LISPS_CLAADAPT" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_LISPS_TT_CLAADAPT">Curvas Adaptáveis (CLA_ADAPT)</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_LISPS_BTN_CLAGLEBA" Id="AcRibbonCommandButton" Text="Grupos / Glebas" ButtonStyle="SmallWithText" MenuMacroID="MM_LISPS_CLAGLEBA" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_LISPS_TT_CLAGLEBA">Grupos / Glebas (CLA_GLEBA)</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_LISPS_BTN_CLAOBST" Id="AcRibbonCommandButton" Text="Obstáculos" ButtonStyle="SmallWithText" MenuMacroID="MM_LISPS_CLAOBST" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_LISPS_TT_CLAOBST">Obstáculos (CLA_OBST)</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+          <RibbonCommandButton UID="RBN_LISPS_BTN_CLAMARCO" Id="AcRibbonCommandButton" Text="Marcos (Flags)" ButtonStyle="SmallWithText" MenuMacroID="MM_LISPS_CLAMARCO" KeyTip="">
+            <TooltipTitle xlate="true" UID="XLS_LISPS_TT_CLAMARCO">Marcos (Flags) (CLA_MARCO)</TooltipTitle>
+            <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+          </RibbonCommandButton>
+        </RibbonSplitButton>
+        <RibbonCommandButton UID="RBN_LISPS_BTN_CLAVER" Id="AcRibbonCommandButton" Text="Visualizar Classificação" ButtonStyle="LargeWithText" MenuMacroID="MM_LISPS_CLAVER" KeyTip="">
+          <TooltipTitle xlate="true" UID="XLS_LISPS_TT_CLAVER">Visualizar Classificação (CLA_VER)</TooltipTitle>
+          <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+        </RibbonCommandButton>
+      </RibbonRow>
+    </RibbonPanelSource>
+  </RibbonPanelSourceCollection>
+  <RibbonTabSourceCollection>
+    <RibbonTabSource Text="Lisps" UID="RBN_LISPS_TAB">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <Name xlate="true" UID="XLS_LISPS_TAB">Lisps</Name>
+      <RibbonPanelSourceReference UID="RBN_LISPS_REF_CLA" PanelId="RBN_LISPS_PNL_CLA" ResizeStyle="Default">
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      </RibbonPanelSourceReference>
+      <RibbonPanelSourceReference UID="RBN_LISPS_REF_IMP" PanelId="RBN_LISPS_PNL_IMP" ResizeStyle="Default">
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      </RibbonPanelSourceReference>
+      <RibbonPanelSourceReference UID="RBN_LISPS_REF_AJUSTES" PanelId="RBN_LISPS_PNL_AJUSTES" ResizeStyle="Default">
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      </RibbonPanelSourceReference>
+      <RibbonPanelSourceReference UID="RBN_LISPS_REF_SIST" PanelId="RBN_LISPS_PNL_SIST" ResizeStyle="Default">
+        <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      </RibbonPanelSourceReference>
+    </RibbonTabSource>
+  </RibbonTabSourceCollection>
+  <RibbonTabSelectors />
+</RibbonRoot>

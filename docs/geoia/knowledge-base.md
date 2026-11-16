@@ -62,3 +62,25 @@ A experiência acumulada em ferramentas para AutoCAD oferece um conjunto de padr
 - revisão visual de traçados e layouts.
 
 Esses conhecimentos permitem que o GeoIA não trate o projeto apenas como dados, mas como uma solução técnica integrada e validada.
+
+## Ferramentas CAD recriadas (referência técnica)
+
+| Ferramenta AgroCAD | Comando LISPS | Arquivo | Documentação |
+| --- | --- | --- | --- |
+| GOFUR (Criar Linhas) | `CRIALINHAS` (v1, em uso) | `lisps/CriaLinhas.lsp` | — |
+| GOFUR + OFVA/CPV (versão otimizada, arquivada) | `CRIALINHAS` v2.1 | `lisps/legado/CriaLinhas_v2.lsp` | [lição 01](../../training/lessons/licao-01-gofur-crialinhas-desempenho.md) |
+| GOCON (Conectar Linhas entre Talhões) | `CONECTALINHAS` | `lisps/ConectaLinhas.lsp` | [lição 02](../../training/lessons/licao-02-gocon-conectalinhas.md) |
+| GOROA (Criar Carreadores / Juntar Talhões) | `CARREADORES` | `lisps/Carreadores.lsp` | [lição 03](../../training/lessons/licao-03-goroa-carreadores.md) |
+| CSYS (Coordenadas e Unidades) | `SISCOORD` | `lisps/SisCoord.lsp` | [lição 04](../../training/lessons/licao-04-csys-siscoord.md) |
+| GOOBS (Desviar de Obstáculos) | `DESVIAOBS` | `lisps/Obstaculos.lsp` | [lição 05](../../training/lessons/licao-05-goobs-desviaobs.md) |
+| GOTUR (Criar Manobras) | `MANOBRAS` | `lisps/Manobras.lsp` | [lição 06](../../training/lessons/licao-06-gotur-manobras.md) |
+| — (ferramenta nova) | `SIS_CONCORDAR` | `lisps/Concordancia.lsp` | [lição 07](../../training/lessons/licao-07-sis-concordar.md) |
+| SMP / GOSMP (Reduzir pontos sem perda de qualidade) | `SIMPLIFICAPL` | `lisps/Simplifica.lsp` | [lição 08](../../training/lessons/licao-08-smp-ar2re-simplifica.md) |
+| AR2RE (Converter arcos de polilinhas em segmentos) | `SEGMENTARCOS` | `lisps/Simplifica.lsp` | [lição 08](../../training/lessons/licao-08-smp-ar2re-simplifica.md) |
+| — (ferramenta nova, rede de rotas) | `REDE_VALIDAR` / `REDE_CORRIGIR` / `REDE_PROXIMO` / `REDE_EXPORTAR` | `lisps/RedeRotas.lsp` | [lição 09](../../training/lessons/licao-09-rede-rotas.md) |
+| — (ferramenta nova, importação) | `IMPKML` / `IMPGEOJSON` / `IMPSHP` | `lisps/ImpComum.lsp` + `ImpKML.lsp` / `ImpGeoJSON.lsp` / `ImpSHP.lsp` | [lição 10](../../training/lessons/licao-10-importacao.md) |
+| GOIMP / GOEXP (Importação / Exportação Avançada) | `GEOIMPORTAR` / `GEOEXPORTAR` | `lisps/GeoImpExp.lsp` | [lição 10](../../training/lessons/licao-10-importacao.md) |
+| KLA, CFT, RCFT, CPCFT, CFL, VV, JDBEX, JDBIN, JDHBEX, JDHBIN, JDABC, JDABL, JDLIN, CGLE | `CLA_*` | `lisps/Classifica.lsp` | [lição 11](../../training/lessons/licao-11-classificacao-cft.md) |
+
+Regra geral: em linhas guias e de plantio, as pontas terminam no limite do
+talhão, sem duplicatas, ByLayer, nos layers `GUIDELINES` / `CROPLINES`.

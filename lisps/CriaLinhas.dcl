@@ -1,58 +1,62 @@
-// CriaLinhas.dcl - Linhas de Sulcação, Plantio e Colheita (comando CRIALINHAS)
+// CriaLinhas.dcl - Configuração do CRIALINHAS (Guidelines e Fileiras de Plantio).
+// O diálogo só configura; a criação é feita pela linha de comando (CRIALINHAS).
 
 crialinhas : dialog {
-  label = "Linhas de Sulcação, Plantio e Colheita";
+  label = "Configurar Guidelines e Fileiras";
+
+  // ---- topo: preview | predefinições + tipo de geração
   : row {
-    : image { key = "img"; width = 22; height = 12; fixed_width = true; fixed_height = true; color = -15; }
+    : boxed_column {
+      label = "Pré-visualização";
+      : image { key = "img"; width = 30; height = 9; fixed_width = true; fixed_height = true; color = -15; }
+    }
     : column {
-      : boxed_row {
+      : boxed_column {
         label = "Predefinições";
-        : button { key = "carregar"; label = "Carregar..."; }
-        : button { key = "salvar";   label = "Salvar..."; }
-        : button { key = "padrao";   label = "Tornar Padrão"; }
+        : row {
+          : button { key = "carregar"; label = "Carregar..."; }
+          : button { key = "salvar";   label = "Salvar..."; }
+        }
+        : button { key = "padrao"; label = "Definir como Padrão"; }
       }
-      : boxed_radio_row {
+      : boxed_radio_column {
         key = "modo";
-        label = "Linhas a serem criadas";
-        : radio_button { key = "G";  label = "Somente Guias"; }
-        : radio_button { key = "GC"; label = "Guias + Plantio"; }
-        : radio_button { key = "C";  label = "Somente Plantio"; }
-      }
-      : row {
-        : boxed_column {
-          label = "Linhas Guias";
-          : edit_box { key = "espg"; label = "Espaçamento (m)"; edit_width = 8; }
-          : toggle   { key = "manual"; label = "Modo Manual"; }
-        }
-        : boxed_column {
-          label = "Linhas de Plantio";
-          : edit_box { key = "qtd";  label = "Quantidade"; edit_width = 8; }
-          : edit_box { key = "espp"; label = "Espaçamento (m)"; edit_width = 8; }
-        }
+        label = "Tipo de Geração";
+        : radio_button { key = "G";  label = "Somente Guidelines"; }
+        : radio_button { key = "GC"; label = "Guidelines + Fileiras"; }
+        : radio_button { key = "C";  label = "Somente Fileiras"; }
       }
     }
   }
-  : row {
-    : boxed_row {
-      label = "Criar Linhas de Cabeceira";
-      : edit_box { key = "passadas"; label = "Passadas"; edit_width = 4; }
-      : column {
-        : button { key = "dentro"; label = "Para Dentro"; }
-        : button { key = "fora";   label = "Para Fora"; }
+
+  // ---- espaçamento e distribuição
+  : boxed_row {
+    label = "Configurações de Espaçamento e Distribuição";
+    : boxed_column {
+      label = "Linhas Guidelines";
+      : text { label = "Extensão das linhas internas:"; }
+      : radio_column {
+        key = "manual";
+        : radio_button { key = "auto"; label = "Automático (todo o talhão)"; }
+        : radio_button { key = "man";  label = "Manual (indicar posição final)"; }
       }
+      : edit_box { key = "espg"; label = "Espaçamento (m):"; edit_width = 8; }
     }
-    : boxed_row {
-      label = "Criar Linhas Internas";
-      : button { key = "criar"; label = "Criar"; height = 3; }
-      : column {
-        : button { key = "selecionar"; label = "Selecionar"; }
-        : button { key = "avancado";   label = "Opções Avançadas..."; }
-      }
+    : boxed_column {
+      label = "Fileiras de Plantio";
+      : edit_box { key = "qtd";  label = "Quantidade por Passada:"; edit_width = 8; }
+      : edit_box { key = "espp"; label = "Espaçamento entre Fileiras (m):"; edit_width = 8; }
+      : spacer { height = 1; }
     }
   }
+
+  // ---- rodapé
+  : text { key = "status"; label = ""; }
   : row {
-    : text { key = "status"; label = ""; width = 50; }
-    : button { key = "cancel"; label = "Sair"; is_cancel = true; fixed_width = true; width = 12; }
+    : button { key = "avancado"; label = "Opções Avançadas..."; fixed_width = true; }
+    : spacer { width = 8; }
+    : button { key = "accept"; label = "OK"; is_default = true; fixed_width = true; width = 12; }
+    : button { key = "cancel"; label = "Cancelar"; is_cancel = true; fixed_width = true; width = 12; }
   }
 }
 
@@ -68,10 +72,6 @@ crialinhas_avancado : dialog {
       : edit_box { key = "layp"; label = "Layer do plantio";  edit_width = 18; }
       : edit_box { key = "corp"; label = "Cor"; edit_width = 4; }
     }
-  }
-  : boxed_column {
-    label = "Linhas de Cabeceira";
-    : toggle { key = "recuar"; label = "Incluir recuo na primeira passada (meio espaçamento da borda)"; }
   }
   : boxed_column {
     label = "Linhas Internas";

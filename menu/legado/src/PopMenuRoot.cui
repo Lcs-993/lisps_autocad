@@ -1,0 +1,386 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+Warning! Do not edit the contents of this file.
+If you attempt to edit this file using an XML editor, you could lose
+customization and migration functionality. If you need to change
+information in the customization file, use the Customize User Interface
+dialog in the product.
+To access the Customize User Interface dialog, click the Tools menu,
+Customization panel, User Interface button, or enter CUI on the command line.
+-->
+<PopMenuRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <PopMenu hasDiesel="false" UID="PM_LISPS_MAIN">
+    <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+    <Alias>POP1</Alias>
+    <Alias>LISPS</Alias>
+    <Name xlate="true" UID="XLS_LISPS_POP_MAIN">&amp;Lisps</Name>
+    <PopMenuRef pUID="PM_LISPS_CLASSIF" UID="PMR_LISPS_CLASSIF">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+    </PopMenuRef>
+    <PopMenuRef pUID="PM_LISPS_IMPORTAR" UID="PMR_LISPS_IMPORTAR">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+    </PopMenuRef>
+    <PopMenuRef pUID="PM_LISPS_AJUSTES" UID="PMR_LISPS_AJUSTES">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+    </PopMenuRef>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_LISPS_SC">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_LISPS_PMI_SC" xlate="true">Coordenadas e &amp;Unidades (SISCOORD)</NameRef>
+      <MenuItem>
+        <MacroRef MenuMacroID="MM_LISPS_SISCOORD" />
+      </MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_LISPS_CL">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_LISPS_PMI_CL" xlate="true">&amp;Criar Linhas (CRIALINHAS)</NameRef>
+      <MenuItem>
+        <MacroRef MenuMacroID="MM_LISPS_CRIALINHAS" />
+      </MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_LISPS_CN">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_LISPS_PMI_CN" xlate="true">C&amp;onectar Linhas (CONECTALINHAS)</NameRef>
+      <MenuItem>
+        <MacroRef MenuMacroID="MM_LISPS_CONECTALINHAS" />
+      </MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_LISPS_CR">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_LISPS_PMI_CR" xlate="true">Ca&amp;rreadores (CARREADORES)</NameRef>
+      <MenuItem>
+        <MacroRef MenuMacroID="MM_LISPS_CARREADORES" />
+      </MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_LISPS_OB">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_LISPS_PMI_OB" xlate="true">&amp;Desviar de Obstáculos (DESVIAOBS)</NameRef>
+      <MenuItem>
+        <MacroRef MenuMacroID="MM_LISPS_DESVIAOBS" />
+      </MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_LISPS_MN">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_LISPS_PMI_MN" xlate="true">&amp;Manobras (MANOBRAS)</NameRef>
+      <MenuItem>
+        <MacroRef MenuMacroID="MM_LISPS_MANOBRAS" />
+      </MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_LISPS_SCC">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_LISPS_PMI_SCC" xlate="true">Concordar &amp;Eixos (SIS_CONCORDAR)</NameRef>
+      <MenuItem>
+        <MacroRef MenuMacroID="MM_LISPS_SIS_CONCORDAR" />
+      </MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="true" UID="PMI_LISPS_SEP_RA">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_LISPS_RAV">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_LISPS_PMI_RAV" xlate="true">&amp;Validar Rede de Rotas (REDE_VALIDAR)</NameRef>
+      <MenuItem><MacroRef MenuMacroID="MM_LISPS_RA_VALIDAR" /></MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_LISPS_RAC">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_LISPS_PMI_RAC" xlate="true">Corrigir Rede de Rotas (REDE_CORRIGIR)</NameRef>
+      <MenuItem><MacroRef MenuMacroID="MM_LISPS_RA_CORRIGIR" /></MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_LISPS_RAP">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_LISPS_PMI_RAP" xlate="true">Próximo Erro da Rede (REDE_PROXIMO)</NameRef>
+      <MenuItem><MacroRef MenuMacroID="MM_LISPS_RA_PROXIMO" /></MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_LISPS_RAE">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_LISPS_PMI_RAE" xlate="true">Exportar Rede em GeoJSON (REDE_EXPORTAR)</NameRef>
+      <MenuItem><MacroRef MenuMacroID="MM_LISPS_RA_EXPORTAR" /></MenuItem>
+    </PopMenuItem>
+    <PopMenuRef pUID="PM_LISPS_RAREDE" UID="PMR_LISPS_RAREDE">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+    </PopMenuRef>
+  </PopMenu>
+  <PopMenu hasDiesel="false" UID="PM_LISPS_AJUSTES">
+    <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+    <Name xlate="true" UID="XLS_LISPS_POP_AJUSTES">&amp;Ajustes</Name>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_LISPS_TRLE">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_LISPS_PMI_TRLE" xlate="true">Transformar em &amp;Limite Externo (TR-LE)</NameRef>
+      <MenuItem>
+        <MacroRef MenuMacroID="MM_LISPS_TRLE" />
+      </MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_LISPS_TRLI">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_LISPS_PMI_TRLI" xlate="true">Transformar em Limite &amp;Interno (TR-LI)</NameRef>
+      <MenuItem><MacroRef MenuMacroID="MM_LISPS_TRLI" /></MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_LISPS_TRSU">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_LISPS_PMI_TRSU" xlate="true">Transformar em &amp;Sulcação (TR-SU)</NameRef>
+      <MenuItem><MacroRef MenuMacroID="MM_LISPS_TRSU" /></MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_LISPS_TRTA">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_LISPS_PMI_TRTA" xlate="true">Transformar em &amp;Talhão (TR-TA)</NameRef>
+      <MenuItem><MacroRef MenuMacroID="MM_LISPS_TRTA" /></MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_LISPS_TRTE">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_LISPS_PMI_TRTE" xlate="true">Transformar em T&amp;erraço (TR-TE)</NameRef>
+      <MenuItem><MacroRef MenuMacroID="MM_LISPS_TRTE" /></MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_LISPS_TRCO">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_LISPS_PMI_TRCO" xlate="true">Transformar em &amp;Colheita (TR-CO)</NameRef>
+      <MenuItem><MacroRef MenuMacroID="MM_LISPS_TRCO" /></MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="true" UID="PMI_LISPS_SEP1">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_LISPS_CORTALIM">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_LISPS_PMI_CORTALIM" xlate="true">C&amp;ortar linhas pelo limite (CORTALIM)</NameRef>
+      <MenuItem><MacroRef MenuMacroID="MM_LISPS_CORTALIM" /></MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_LISPS_ESTENDELIM">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_LISPS_PMI_ESTENDELIM" xlate="true">Este&amp;nder linhas até o limite (ESTENDELIM)</NameRef>
+      <MenuItem><MacroRef MenuMacroID="MM_LISPS_ESTENDELIM" /></MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_LISPS_AJUSTALIM">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_LISPS_PMI_AJUSTALIM" xlate="true">Estender e cortar até o limite (&amp;AJUSTALIM)</NameRef>
+      <MenuItem><MacroRef MenuMacroID="MM_LISPS_AJUSTALIM" /></MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_LISPS_APAGALIM">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_LISPS_PMI_APAGALIM" xlate="true">A&amp;pagar dentro/fora de limite (APAGALIM)</NameRef>
+      <MenuItem><MacroRef MenuMacroID="MM_LISPS_APAGALIM" /></MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="true" UID="PMI_LISPS_SEP_GEOM">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_LISPS_SMP">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_LISPS_PMI_SMP" xlate="true">Si&amp;mplificar Polilinhas (SIMPLIFICAPL)</NameRef>
+      <MenuItem><MacroRef MenuMacroID="MM_LISPS_SIMPLIFICAPL" /></MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_LISPS_SEGA">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_LISPS_PMI_SEGA" xlate="true">Segmentar A&amp;rcos (SEGMENTARCOS)</NameRef>
+      <MenuItem><MacroRef MenuMacroID="MM_LISPS_SEGMENTARCOS" /></MenuItem>
+    </PopMenuItem>
+  </PopMenu>
+  <PopMenu hasDiesel="false" UID="PM_LISPS_RAREDE">
+    <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+    <Name xlate="true" UID="XLS_LISPS_POP_RAREDE">Rede - versão RA_REDE (comparação)</Name>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_LISPS_ALT_REDECARREGARA">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_LISPS_PMI_ALT_REDECARREGARA" xlate="true">Carregar versão RA_REDE (REDE_CARREGA_RA)</NameRef>
+      <MenuItem><MacroRef MenuMacroID="MM_LISPS_ALT_REDECARREGARA" /></MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="true" UID="PMI_LISPS_SEP_ALT">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_LISPS_ALT_RAVERIFICAR">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_LISPS_PMI_ALT_RAVERIFICAR" xlate="true">Verificar (RA_VERIFICAR)</NameRef>
+      <MenuItem><MacroRef MenuMacroID="MM_LISPS_ALT_RAVERIFICAR" /></MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_LISPS_ALT_RACORRIGIR">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_LISPS_PMI_ALT_RACORRIGIR" xlate="true">Corrigir Tudo (RA_CORRIGIR)</NameRef>
+      <MenuItem><MacroRef MenuMacroID="MM_LISPS_ALT_RACORRIGIR" /></MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_LISPS_ALT_RAQUEBRAR">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_LISPS_PMI_ALT_RAQUEBRAR" xlate="true">Quebrar nos Entroncamentos (RA_QUEBRAR)</NameRef>
+      <MenuItem><MacroRef MenuMacroID="MM_LISPS_ALT_RAQUEBRAR" /></MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_LISPS_ALT_RAPONTAS">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_LISPS_PMI_ALT_RAPONTAS" xlate="true">Ligar Pontas Soltas (RA_PONTAS)</NameRef>
+      <MenuItem><MacroRef MenuMacroID="MM_LISPS_ALT_RAPONTAS" /></MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_LISPS_ALT_RAJUNTAR">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_LISPS_PMI_ALT_RAJUNTAR" xlate="true">Emendar Pseudo-nós (RA_JUNTAR)</NameRef>
+      <MenuItem><MacroRef MenuMacroID="MM_LISPS_ALT_RAJUNTAR" /></MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_LISPS_ALT_RASEGMENTAR">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_LISPS_PMI_ALT_RASEGMENTAR" xlate="true">Segmentar Arcos (RA_SEGMENTAR)</NameRef>
+      <MenuItem><MacroRef MenuMacroID="MM_LISPS_ALT_RASEGMENTAR" /></MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_LISPS_ALT_RASEMCONEXAO">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_LISPS_PMI_ALT_RASEMCONEXAO" xlate="true">Marcar Sem Conexão (viaduto) (RA_SEMCONEXAO)</NameRef>
+      <MenuItem><MacroRef MenuMacroID="MM_LISPS_ALT_RASEMCONEXAO" /></MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_LISPS_ALT_RAPROXIMO">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_LISPS_PMI_ALT_RAPROXIMO" xlate="true">Próximo Marcador (RA_PROXIMO)</NameRef>
+      <MenuItem><MacroRef MenuMacroID="MM_LISPS_ALT_RAPROXIMO" /></MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_LISPS_ALT_RALIMPAR">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_LISPS_PMI_ALT_RALIMPAR" xlate="true">Limpar Marcadores (RA_LIMPAR)</NameRef>
+      <MenuItem><MacroRef MenuMacroID="MM_LISPS_ALT_RALIMPAR" /></MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_LISPS_ALT_RADESENHAR">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_LISPS_PMI_ALT_RADESENHAR" xlate="true">Desenhar Linha da Rede (RA_DESENHAR)</NameRef>
+      <MenuItem><MacroRef MenuMacroID="MM_LISPS_ALT_RADESENHAR" /></MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_LISPS_ALT_RACONFIG">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_LISPS_PMI_ALT_RACONFIG" xlate="true">Configurar (RA_CONFIG)</NameRef>
+      <MenuItem><MacroRef MenuMacroID="MM_LISPS_ALT_RACONFIG" /></MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_LISPS_ALT_RAAJUDA">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_LISPS_PMI_ALT_RAAJUDA" xlate="true">Ajuda (RA_AJUDA)</NameRef>
+      <MenuItem><MacroRef MenuMacroID="MM_LISPS_ALT_RAAJUDA" /></MenuItem>
+    </PopMenuItem>
+  </PopMenu>
+  <PopMenu hasDiesel="false" UID="PM_LISPS_IMPORTAR">
+    <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+    <Name xlate="true" UID="XLS_LISPS_POP_IMPORTAR">&amp;Importação / Exportação</Name>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_LISPS_GEOIMPORTAR">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_LISPS_PMI_GEOIMPORTAR" xlate="true">Importação Avançada (GEOIMPORTAR)</NameRef>
+      <MenuItem><MacroRef MenuMacroID="MM_LISPS_GEOIMPORTAR" /></MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_LISPS_GEOEXPORTAR">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_LISPS_PMI_GEOEXPORTAR" xlate="true">Exportação Avançada (GEOEXPORTAR)</NameRef>
+      <MenuItem><MacroRef MenuMacroID="MM_LISPS_GEOEXPORTAR" /></MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_LISPS_GEOCALIBRA">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_LISPS_PMI_GEOCALIBRA" xlate="true">Calibrar Object Data do MAPIMPORT (GEOCALIBRA)</NameRef>
+      <MenuItem><MacroRef MenuMacroID="MM_LISPS_GEOCALIBRA" /></MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="true" UID="PMI_LISPS_SEP_IMP">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_LISPS_IMPKML">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_LISPS_PMI_IMPKML" xlate="true">Importar KML / KMZ (IMPKML)</NameRef>
+      <MenuItem><MacroRef MenuMacroID="MM_LISPS_IMPKML" /></MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_LISPS_IMPGEOJSON">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_LISPS_PMI_IMPGEOJSON" xlate="true">Importar GeoJSON (IMPGEOJSON)</NameRef>
+      <MenuItem><MacroRef MenuMacroID="MM_LISPS_IMPGEOJSON" /></MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_LISPS_IMPSHP">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_LISPS_PMI_IMPSHP" xlate="true">Importar Shapefile (IMPSHP)</NameRef>
+      <MenuItem><MacroRef MenuMacroID="MM_LISPS_IMPSHP" /></MenuItem>
+    </PopMenuItem>
+  </PopMenu>
+  <PopMenu hasDiesel="false" UID="PM_LISPS_CLASSIF">
+    <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+    <Name xlate="true" UID="XLS_LISPS_POP_CLASSIF">&amp;Classificação para Exportação</Name>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_LISPS_CLAGERENCIAR">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_LISPS_PMI_CLAGERENCIAR" xlate="true">Classificação Avançada (CLA_GERENCIAR)</NameRef>
+      <MenuItem><MacroRef MenuMacroID="MM_LISPS_CLAGERENCIAR" /></MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="true" UID="PMI_LISPS_SEP_CLA_CLACFT">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_LISPS_CLACFT">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_LISPS_PMI_CLACFT" xlate="true">Definir Cliente, Fazenda e Talhão (CLA_CFT)</NameRef>
+      <MenuItem><MacroRef MenuMacroID="MM_LISPS_CLACFT" /></MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_LISPS_CLAAUTO">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_LISPS_PMI_CLAAUTO" xlate="true">CFT Automático (CLA_AUTO)</NameRef>
+      <MenuItem><MacroRef MenuMacroID="MM_LISPS_CLAAUTO" /></MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_LISPS_CLACOPIAR">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_LISPS_PMI_CLACOPIAR" xlate="true">Copiar CFT (CLA_COPIAR)</NameRef>
+      <MenuItem><MacroRef MenuMacroID="MM_LISPS_CLACOPIAR" /></MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_LISPS_CLAREMOVER">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_LISPS_PMI_CLAREMOVER" xlate="true">Remover CFT / Classificação (CLA_REMOVER)</NameRef>
+      <MenuItem><MacroRef MenuMacroID="MM_LISPS_CLAREMOVER" /></MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_LISPS_CLAFILTRO">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_LISPS_PMI_CLAFILTRO" xlate="true">Filtrar Talhões por CFT (CLA_FILTRO)</NameRef>
+      <MenuItem><MacroRef MenuMacroID="MM_LISPS_CLAFILTRO" /></MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_LISPS_CLALEGENDA">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_LISPS_PMI_CLALEGENDA" xlate="true">Legenda de CFT (CLA_LEGENDA)</NameRef>
+      <MenuItem><MacroRef MenuMacroID="MM_LISPS_CLALEGENDA" /></MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="true" UID="PMI_LISPS_SEP_CLA_CLALIMEXT">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_LISPS_CLALIMEXT">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_LISPS_PMI_CLALIMEXT" xlate="true">Limite Externo (CLA_LIMEXT)</NameRef>
+      <MenuItem><MacroRef MenuMacroID="MM_LISPS_CLALIMEXT" /></MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_LISPS_CLALIMINT">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_LISPS_PMI_CLALIMINT" xlate="true">Limites Internos (CLA_LIMINT)</NameRef>
+      <MenuItem><MacroRef MenuMacroID="MM_LISPS_CLALIMINT" /></MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_LISPS_CLACABEXT">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_LISPS_PMI_CLACABEXT" xlate="true">Cabeceira Externa (CLA_CABEXT)</NameRef>
+      <MenuItem><MacroRef MenuMacroID="MM_LISPS_CLACABEXT" /></MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_LISPS_CLACABINT">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_LISPS_PMI_CLACABINT" xlate="true">Cabeceiras Internas (CLA_CABINT)</NameRef>
+      <MenuItem><MacroRef MenuMacroID="MM_LISPS_CLACABINT" /></MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_LISPS_CLACURVAAB">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_LISPS_PMI_CLACURVAAB" xlate="true">Curvas AB (CLA_CURVAAB)</NameRef>
+      <MenuItem><MacroRef MenuMacroID="MM_LISPS_CLACURVAAB" /></MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_LISPS_CLALINHAAB">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_LISPS_PMI_CLALINHAAB" xlate="true">Linhas AB (CLA_LINHAAB)</NameRef>
+      <MenuItem><MacroRef MenuMacroID="MM_LISPS_CLALINHAAB" /></MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_LISPS_CLAADAPT">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_LISPS_PMI_CLAADAPT" xlate="true">Curvas Adaptáveis (CLA_ADAPT)</NameRef>
+      <MenuItem><MacroRef MenuMacroID="MM_LISPS_CLAADAPT" /></MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_LISPS_CLAGLEBA">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_LISPS_PMI_CLAGLEBA" xlate="true">Grupos / Glebas (CLA_GLEBA)</NameRef>
+      <MenuItem><MacroRef MenuMacroID="MM_LISPS_CLAGLEBA" /></MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_LISPS_CLAOBST">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_LISPS_PMI_CLAOBST" xlate="true">Obstáculos (CLA_OBST)</NameRef>
+      <MenuItem><MacroRef MenuMacroID="MM_LISPS_CLAOBST" /></MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_LISPS_CLAMARCO">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_LISPS_PMI_CLAMARCO" xlate="true">Marcos (Flags) (CLA_MARCO)</NameRef>
+      <MenuItem><MacroRef MenuMacroID="MM_LISPS_CLAMARCO" /></MenuItem>
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="true" UID="PMI_LISPS_SEP_CLA_CLAVER">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+    </PopMenuItem>
+    <PopMenuItem IsSeparator="false" hasDiesel="false" UID="PMI_LISPS_CLAVER">
+      <ModifiedRev MajorVersion="23" MinorVersion="0" UserVersion="0" />
+      <NameRef UID="XLS_LISPS_PMI_CLAVER" xlate="true">Modo de Visualização da Classificação (CLA_VER)</NameRef>
+      <MenuItem><MacroRef MenuMacroID="MM_LISPS_CLAVER" /></MenuItem>
+    </PopMenuItem>
+  </PopMenu>
+</PopMenuRoot>
